@@ -1195,11 +1195,11 @@
                                                                         <div class="form-check col-md-6 d-flex align-items-center justify-content-end">
                                                                             <div class='row px-4'>
                                                                                 <div class="col-md-10">
-                                                                                    <div>
+                                                                                    <div class='d-flex align-items-center justify-content-end'>
                                                                                         <field name='fin_env_emp' class="form-check-input" />
                                                                                         <label class="form-check-label" for="fin_env_emp_fecha"></label>
                                                                                     </div>
-                                                                                    <div>
+                                                                                    <div class='d-flex align-items-center justify-content-end'>
                                                                                         <field name="fin_retira_cliente" class="form-check-input" id="fin_retira_cliente" attrs="{'readonly': [('fin_cancel_deuda', '=', False)]}"/>
                                                                                         <label class="form-check-label" for="fin_retira_cliente"></label>
                                                                                     </div>
