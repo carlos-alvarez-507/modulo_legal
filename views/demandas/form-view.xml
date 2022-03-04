@@ -32,7 +32,7 @@
 
             <form> 
                 <div class='container-fluid'>
-                   <!-- <div class="container"> -->
+                   <div class="container">
                     <div class='row'>
                         <div class="col-md-12">
                             <field name='title_demanda' class='text-info font-weight-bold' style='font-size: 14px; font-weight: 700'/>
@@ -43,7 +43,7 @@
                             <notebook>
                                 <page string='Demanda'>
                                     <div class='container-fluid'>
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
                                             <div class="row mt-4">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                     <div class="form-row mt-2">
@@ -142,13 +142,13 @@
                                                         </legend>
             
                                                                 <div class="col-sm-12 d-flex align-items-center justify-content-start">
-                                                                    <div class="form-check p-4">
+                                                                    <div class="form-check p-4 d-flex align-items-center justify-content-start">
                                                                         <field class="form-check-input" name="admitida" id="admitida" />
                                                                         <label class="form-check-label" for="admitida">
                                                               ADMITIDA
                                                             </label>
                                                                     </div>
-                                                                    <div class="form-check p-4">
+                                                                    <div class="form-check p-4 d-flex align-items-center justify-content-start">
                                                                         <field class="form-check-input" name="no_admitida" id="no_admitida" />
                                                                         <label class="form-check-label" for="no_admitida">
                                                               NO ADMITIDA
@@ -198,7 +198,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                  
                                 </page>
@@ -207,7 +207,7 @@
                                     <!-- <div class='container-fluid p-4' style='background-color: #06372E; '> -->
                                     <!-- <div class="container text-white" style='background-color: #3D9970; box-shadow: 2px 0 2px #06372E;'> -->
                                     <div class='container-fluid'>
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
                                             <div class="row mt-4">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             
@@ -370,13 +370,13 @@
             
                                                 </div>
                                             </div>
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                 </page>
                                 <page string='Bienes a Embargar o Secuestrar'>
             
                                     <div class='container-fluid'>
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
                                             <div class="row mt-4">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             
@@ -494,12 +494,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                 </page>
                                 <page string='Notificación'>
                                     <div class='container-fluid'>
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
                                             <div class="row mt-4">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                     <!-- PART 1 -->
@@ -636,13 +636,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                 </page>
                                 <page string='Embargo'>
             
                                     <div class="container-fluid">
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
             
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
@@ -880,13 +880,13 @@
                                             </div>
             
             
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                 </page>
                                 <page string='Ampliación Embargo - Secuestro'>
             
                                     <div class="container-fluid">
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
             
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
@@ -1084,13 +1084,13 @@
                                             </div>
             
             
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
             
                                 </page>
                                 <page string='Fin'>
                                     <div class="container-fluid">
-                                        <!-- <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'> -->
+                                        <div class="container" style='color: #000; box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26); padding: 24px;'>
             
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
@@ -1281,11 +1281,11 @@
                                             </div>
             
             
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                 </page>
                                 <page string='Libro - Legal'>
-                                    <!-- <div class="container-fluid text-black "> -->
+                                    <div class="container-fluid text-black ">
                                         <!-- <div class="container"> -->
                                             <div class="row">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
@@ -1317,12 +1317,12 @@
                                                 </div>
                                             </div>
                                         <!-- </div> -->
-                                    <!-- </div> -->
+                                    </div>
                                 </page>
                             </notebook>
                         </div>
                     </div>
-                   <!-- </div> -->
+                   </div>
                 </div>                
             </form>
 
