@@ -6,7 +6,7 @@
     'author': 'Grupo Saleta',
     'category': 'General',
     'version': '1.0.0',
-    'depends': [],
+    'depends': ['base'],
     'data': [
         'security/rf_security.xml',
         'security/ir.model.access.csv',
