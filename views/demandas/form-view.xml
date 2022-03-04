@@ -68,7 +68,7 @@
                                                             <field name='cedula' class="form-control text-info font-weight-bold" id="cedula" placeholder="9-999-9999" />
                                                         </div>
                                                         <div class="form-group col-md-2 d-flex align-items-center justify-content-center ">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="ck_crear" class="form-check-input" id="ck_crear" />
                                                                 <label class="form-check-label" for="ck_crear">
                                                           MOSTRAR
@@ -114,7 +114,7 @@
                                                             <field name="juzgado" class="form-control" id="juzgado" />
                                                         </div>
                                                         <div class="form-group d-flex align-items-center justify-content-center  col-md-4" attrs="{'invisible': [('ck_crear','=',False)]}">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="ck_sol_sec" class="form-check-input" id="ck_sol_sec" />
                                                                 <label class="form-check-label" for="ck_sol_sec">
                                                                 SOLICITUD DE SECUESTRO
@@ -214,7 +214,7 @@
                                                     <!-- PART 1 -->
                                                     <div class="form-row mt-4 ">
                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="sec_fianza" class="form-check-input " id="sec_fianza" />
                                                                 <label class="form-check-label" for="sec_fianza"></label>
                                                             </div>
@@ -236,7 +236,7 @@
                                                         </div>
             
                                                         <div class="form-group col-md-6 ">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="sec_devolucion_fianza" class="form-check-input" id="sec_devolucion_fianza" attrs="{ 'readonly': [('sec_fianza','=',False)]}"/>
                                                                 <label class="form-check-label" for="sec_devolucion_fianza">
                                                           DEVOLUCION FIANZA
@@ -383,7 +383,7 @@
                                                     <!-- PART 1 -->
                                                     <div class="form-row mt-4 ">
                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="bienes" class="form-check-input" id="bienes" />
                                                                 <label class="form-check-label" for="bienes"></label>
                                                             </div>
@@ -395,7 +395,7 @@
                                                         <div class="form-group col-md-4 ">
                                                             <div class="form-row mt-4 ">
                                                                 <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="bien_finca_prop" class="form-check-input" id="bien_finca_prop" attrs="{'readonly': [('bienes', '=', False)]}"/>
                                                                         <label class="form-check-label" for="bien_finca_prop"></label>
                                                                     </div>
@@ -403,7 +403,7 @@
                                                             </div>
                                                             <div class="form-row mt-4 ">
                                                                 <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="bien_salario" class="form-check-input" id="bien_salario" attrs="{'readonly': [('bienes', '=', False)]}"/>
                                                                         <label class="form-check-label" for="bien_salario"></label>
                                                                     </div>
@@ -411,7 +411,7 @@
                                                             </div>
                                                             <div class="form-row mt-4 ">
                                                                 <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="bien_ambos" class="form-check-input" id="bien_ambos" attrs="{'readonly': [('bienes', '=', False)]}"/>
                                                                         <label class="form-check-label" for="bien_ambos"></label>
                                                                     </div>
@@ -505,7 +505,7 @@
                                                     <!-- PART 1 -->
                                                     <div class="form-row mt-4 ">
                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="notificacion" class="form-check-input" id="notificacion" />
                                                                 <label class="form-check-label" for="notificacion"></label>
                                                             </div>
@@ -528,7 +528,7 @@
                                                                         <div class="form-group col-md-12 ">
                                                                             <div class="form-row mt-4 ">
                                                                                 <div class="form-group col-md-12">
-                                                                                    <div class="form-check">
+                                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                                         <field name="noti_client" class="form-check-input" id="noti_client"  attrs="{'readonly': [('notificacion', '=', False)]}"/>
                                                                                         <label class="form-check-label" for="noti_client"></label>
                                                                                     </div>
@@ -536,7 +536,7 @@
                                                                             </div>
                                                                             <div class="form-row mt-4 ">
                                                                                 <div class="form-group col-md-12">
-                                                                                    <div class="form-check">
+                                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                                         <field name="noti_emplazamiento" class="form-check-input" id="noti_emplazamiento"  attrs="{'readonly': [('notificacion', '=', False)]}"/>
                                                                                         <label class="form-check-label" for="noti_emplazamiento"></label>
                                                                                     </div>
@@ -544,7 +544,7 @@
                                                                             </div>
                                                                             <div class="form-row mt-4 ">
                                                                                 <div class="form-group col-md-12">
-                                                                                    <div class="form-check">
+                                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                                         <field name="noti_abogado" class="form-check-input" id="noti_abogado"  attrs="{'readonly': [('notificacion', '=', False)]}"/>
                                                                                         <label class="form-check-label" for="noti_abogado"></label>
                                                                                     </div>
@@ -562,7 +562,7 @@
             
                                                                     <div class="form-row mt-4 ">
                                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
-                                                                            <div class="form-check">
+                                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                                 <field name="noti_transaction" class="form-check-input" id="noti_transaction"  attrs="{'readonly': [('noti_abogado', '=', False)]}"/>
                                                                                 <label class="form-check-label" for="noti_transaction"></label>
                                                                             </div>
@@ -590,7 +590,7 @@
                                                         <div class="form-group col-md-6">
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="noti_solicitud" class="form-check-input" id="noti_solicitud" attrs="{'readonly': [('notificacion', '=', False)]}" />
                                                                         <label class="form-check-label" for="noti_solicitud"></label>
                                                                     </div>
@@ -615,7 +615,7 @@
                                                         <div class="form-group col-md-6">
             
                                                             <div class="row">
-                                                                <div class="form-check">
+                                                                <div class="form-check d-flex align-items-center justify-content-start">
                                                                     <field name="noti_denuncia_bienes" class="form-check-input" id="noti_denuncia_bienes" />
                                                                     <label class="form-check-label" for="noti_denuncia_bienes"></label>
                                                                 </div>
@@ -647,7 +647,7 @@
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-12">
-                                                    <div class="form-check">
+                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                         <field name="embargo_visibility" class="form-check-input" id="embargo_visibility" />
                                                         <label class="form-check-label" for="embargo_visibility"></label>
                                                     </div>
@@ -742,7 +742,7 @@
                                             <!-- PART 5 -->
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-12">
-                                                    <div class="form-check">
+                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                         <field name="adj_finca" class="form-check-input" id="adj_finca" attrs="{'readonly': [('bien_salario', '=', True)]}"/>
                                                         <label class="form-check-label" for="adj_finca"></label>
                                                     </div>
@@ -891,7 +891,7 @@
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-12">
-                                                    <div class="form-check">
+                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                         <field name="amp_emb" class="form-check-input" id="amp_emb" />
                                                         <label class="form-check-label" for="amp_emb"></label>
                                                     </div>
@@ -990,7 +990,7 @@
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-12">
-                                                    <div class="form-check">
+                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                         <field name="amp_sec" class="form-check-input" id="amp_sec" />
                                                         <label class="form-check-label" for="amp_sec"></label>
                                                     </div>
@@ -1095,7 +1095,7 @@
                                             <!-- PART 1 -->
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-12">
-                                                    <div class="form-check">
+                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                         <field name="fin_cerrar_archivar" class="form-check-input" id="fin_cerrar_archivar" />
                                                         <label class="form-check-label" for="fin_cerrar_archivar"></label>
                                                     </div>
@@ -1108,7 +1108,7 @@
                                                 <div class="col-md-12">
                                                     <div class="row mt-4">
                                                         <div class="form-group col-md-12">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="fin_cancel_deuda" class="form-check-input" id="fin_cancel_deuda"  attrs="{'readonly': [('fin_cerrar_archivar', '=', False)]}"/>
                                                                 <label class="form-check-label" for="fin_cancel_deuda"></label>
                                                             </div>
@@ -1140,15 +1140,15 @@
                                                             <div class="row  px-4">
                                                                 <!-- PART 1 -->
                                                                 <div class="form-group col-md-12">
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="fin_efectivo" class="form-check-input" id="fin_efectivo" attrs="{'readonly': [('fin_cancel_deuda', '=', False)]}"/>
                                                                         <label class="form-check-label" for="fin_efectivo"></label>
                                                                     </div>
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="fin_cheque" class="form-check-input" id="fin_cheque" attrs="{'readonly': [('fin_cancel_deuda', '=', False)]}"/>
                                                                         <label class="form-check-label" for="fin_cheque"></label>
                                                                     </div>
-                                                                    <div class="form-check">
+                                                                    <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="fin_deposito_judicial" class="form-check-input" id="fin_deposito_judicial" attrs="{'readonly': [('fin_cancel_deuda', '=', False)]}"/>
                                                                         <label class="form-check-label" for="fin_deposito_judicial"></label>
                                                                     </div>
@@ -1230,7 +1230,7 @@
             
                                                     <div class="row mt-4">
                                                         <div class="form-group col-md-12">
-                                                            <div class="form-check">
+                                                            <div class="form-check d-flex align-items-center justify-content-start">
                                                                 <field name="fin_retiro_dem" class="form-check-input" id="fin_retiro_dem" attrs="{'readonly': [('fin_cerrar_archivar', '=', False)]}"/>
                                                                 <label class="form-check-label" for="fin_retiro_dem"></label>
                                                             </div>
