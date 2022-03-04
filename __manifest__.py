@@ -27,4 +27,6 @@
         'views/demo_clientes/demo_clientes.xml',
         'views/main.xml',
     ],
+    'installable': True,
+    'application': True,
 }
