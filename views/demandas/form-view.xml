@@ -21,23 +21,6 @@
         </xpath>
     </template>
 
-
-    <data>
-        <!-- Adds all assets in Odoo -->
-        <template id="assets_backend" name="static_resources_demo assets" inherit_id="web.assets_backend">
-            <xpath expr="." position="inside">
-                <!--These links will be called when loading your Odoo -->
-                <link rel="stylesheet" href="/registros_fiscales/static/src/css/demandas.css" />
-                <link rel="stylesheet" href="/registros_fiscales/static/src/css/secuestros.css" />
-                <link rel="stylesheet" href="/registros_fiscales/static/src/css/bienes.css" />
-                <link rel="stylesheet" href="/registros_fiscales/static/src/css/notificaciones.css" />
-                <link rel="stylesheet" href="/registros_fiscales/static/src/css/embargos.css" />
-                <!-- <script type="text/javascript" src="/registros_fiscales/static/src/js/testing.js"></script> -->
-                <!-- <script type="text/javascript" src="../../static/src/js/testing.js"></script> -->
-            </xpath>
-        </template>
-    </data>
-
     <!-- form view -->
     <record id='demandas_form' model='ir.ui.view'>
         <field name="name">rf.demandas.form.vie</field>
