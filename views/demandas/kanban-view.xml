@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <!-- Vista kanban -->
+    <record id='rf_demandas_kanban_view' model='ir.ui.view'>
+        <field name='name'>rf.demandas.kanban.view</field>
+        <field name='model'>rf.demandas</field>
+        <field name='arch' type='xml'>
+            <kanban>
+                <field name='cedula' />
+                <!-- <field name='name' />
+                <field name='editorial' />
+                <field name='isbn' />
+                <field name='autor_id' />
+                <field name='categoria_id' /> -->
+                <templates>
+                    <t t-name='kanban-box'>
+                        <div class='oe_kanban_global_click'>
+                            <!-- <div class='o_kanban_image'>
+                                <img t-att-src="kanban_image('libro','image',record.id.raw_value)" alt='Image' />
+                            </div> -->
+                            <div class='oe_kanban_details'>
+                                <div class='o_kanban_record_top'>
+                                    <div class='o_kanban_record_heading'>
+                                        <strong class='o_kanban_record_title oe_partner_heading'>
+                                            <field name='cedula' />
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+
+            </kanban>
+        </field>
+
+    </record>
+</odoo>

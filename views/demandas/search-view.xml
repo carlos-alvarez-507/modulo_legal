@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <!-- Vista Search -->
+    <record id='demandas_search_view' model='ir.ui.view'>
+        <field name='name'>rf.demandas.search.view</field>
+        <field name='model'>rf.demandas</field>
+        <field name='arch' type='xml'>
+            <search>
+                <!-- Busqueda Rápida -->
+                <field name='sucursal' string='Cia' />
+                <field name='codigo_demanda' string='ID' />
+                <field name='cedula' string='Cédula' />
+                <field name='cliente_nombre' string='Cliente' />
+                <field name='fecha_reg' string='Fecha Demanda' />
+                <field name='monto_demanda' string='Monto' />
+                <field name='juzgado' string='Juzgado' />
+                <field name='abogado' string='Abogado' />
+                <field name='provincia' string='Provincia' />
+
+
+
+                <!-- Filtro Rápido -->
+                <!-- <filter name='categoria_idioma' string='Categoria Idioma' domain="[('categoria_id','=','Idioma')]" />                 -->
+
+                <!-- <filter name='sec_fianza' string='FIANZA - SI' domain="[('sec_fianza','=',True)]" /> -->
+                <!-- <filter name='sec_fianza' string='FIANZA - NO' domain="[('sec_fianza','=',False)]" /> -->
+                <!-- <filter name='bienes' string='BIENES - SI' domain="[('bienes','=',True)]" /> -->
+                <!-- <filter name='bienes' string='BIENES - NO' domain="[('bienes','=',False)]" /> -->
+                <!-- <filter name='notificacion' string='Notificacion - FI' domain="[('notificacion','=',True)]" /> -->
+                <!-- <filter name='notificacion' string='Notificacion - NO' domain="[('notificacion','=',False)]" /> -->
+                <!-- <filter name='embargo_visibility' string='Ebargo - SI' domain="[('embargo_visibility','=',True)]" /> -->
+                <!-- <filter name='embargo_visibility' string='Ebargo - NO' domain="[('embargo_visibility','=',False)]" /> -->
+                <!-- <filter name='adj_finca' string='ADJUDICACION DE FINCA - SI' domain="[('adj_finca','=',True)]" /> -->
+                <!-- <filter name='adj_finca' string='ADJUDICACION DE FINCA - NO' domain="[('adj_finca','=',False)]" /> -->
+                <!-- <filter name='amp_emb' string='EMBARGO - SI' domain="[('amp_emb','=',True)]" /> -->
+                <!-- <filter name='amp_emb' string='EMBARGO - NO' domain="[('amp_emb','=',False)]" /> -->
+                <!-- <filter name='amp_sec' string='AMPLICACION DE SECUESTRO - SI' domain="[('amp_sec','=',True)]" /> -->
+                <!-- <filter name='amp_sec' string='AMPLICACION DE SECUESTRO - ' domain="[('amp_sec','=',False)]" /> -->
+
+
+
+
+                <!-- Agrupación Rápida -->
+                <!-- expand=0 automaticamente es para que no se expanda simplemente se agrupe, lo opuesto a expand=1 -->
+                <!-- col=10 para que ocupe las 10 columnas de las 12 -->
+                <!-- context nos permite re4alizar agrupacion, nos permite enviar parametros a una funcion en el model-->
+                <!-- <group expand='0' string='Agrupar por' colspan='12' col='10'>
+                    <filter name='categoria' string='Categoria' context="{'group_by':'categoria_id'}" />
+                    <filter name='autor' string='Autor' context="{'group_by':'autor_id'}" />
+                </group> -->
+
+
+            </search>
+
+            <!-- search panel -->
+            <!-- <searchpanel>
+                <field name='sucursal' string='Empresas' icon='fa-user' />
+                <field name='juzgado' string='Juzgados' icon='fa-user' />
+                <field name='provincia' string='Provincias' icon='fa-user' />
+                <field name='abogado' string='Abogado' icon='fa-user' />            
+
+            </searchpanel> -->
+        </field>
+    </record>
+</odoo>

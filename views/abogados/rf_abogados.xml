@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id='rf_abogados_form' model='ir.ui.view'>
+        <field name="name">rf.abogados</field>
+        <field name="model">rf.abogados</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field id='codigo' name='codigo' class='form-control' />
+                            <field id='usuario_id' name='usuario_id' class='form-control' />
+                            <field id='partner_id' name='partner_id' class='form-control' />
+                            <field id='descripcion' name='descripcion' class='form-control' />
+                            <field id='tipo' name='tipo' class='form-control' />
+                            <field id='ckpb' name='ckpb' class='form-control' />
+                            <field id='monto' name='monto' class='form-control' />
+                        </group>
+                        <group>
+                            <field id='ctacont' name='ctacont' class='form-control' />
+                            <field id='cia' name='cia' class='form-control' />
+                            <field id='letra' name='letra' class='form-control' />
+                            <field id='deta0' name='deta0' class='form-control' />
+                            <field id='deta1' name='deta1' class='form-control' />
+                            <field id='deta2' name='deta2' class='form-control' />
+                            <field id='p1era' name='p1era' class='form-control' />
+                            <field id='p2da' name='p2da' class='form-control' />
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_abogados_tree' model='ir.ui.view'>
+        <field name="name">rf.abogados</field>
+        <field name="model">rf.abogados</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='codigo' string='Código'/>
+                <!-- <field name='usuario_id' string='Usuario'/> -->
+                <!-- <field name='partner_id' string='Partner'/> -->
+                <field name='descripcion' string='Decripción'/>
+                <field name='tipo' string='Tipo'/>
+                <!-- <field name='ckpb' string=''/> -->
+                <field name='monto' string='Monto'/>
+                <field name='ctacont' string='Cuenta Contable'/>
+                <field name='cia' string='Empresa'/>
+                <!-- <field name='letra' string=''/>
+                <field name='deta0' string=''/>
+                <field name='deta1' string=''/>
+                <field name='deta2' string=''/>
+                <field name='p1era' string=''/>
+                <field name='p2da' string=''/> -->
+            </tree>
+        </field>
+    </record>
+
+   
+</odoo>

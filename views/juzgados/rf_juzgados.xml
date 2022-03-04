@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id='rf_juzgados_form' model='ir.ui.view'>
+        <field name="name">rf.juzgados</field>
+        <field name="model">rf.juzgados</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field id='codigo' name='codigo' />
+                            <field id='descripcion' name='descripcion' />
+                            <field id='tipo' name='tipo' />
+                            <field id='ckpb' name='ckpb' />
+                            <field id='monto' name='monto' />
+                            <field id='ctacont' name='ctacont' />
+                        </group>
+                        <group>
+                            <field id='cia' name='cia' />
+                            <field id='letra' name='letra' />
+                            <field id='deta0' name='deta0' />
+                            <field id='deta1' name='deta1' />
+                            <field id='deta2' name='deta2' />
+                            <field id='p1era' name='p1era' />
+                            <field id='p2da' name='p2da' />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_juzgados_tree' model='ir.ui.view'>
+        <field name="name">rf.juzgados</field>
+        <field name="model">rf.juzgados</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='codigo' string='Código'/>
+                <field name='descripcion' string='Descripción'/>
+                <field name='tipo' string='Tipo'/>
+                <!-- <field name='ckpb' string=''/> -->
+                <field name='monto' string='Monto'/>
+                <field name='ctacont' string='Cuenta Cliente'/>
+                <field name='cia' string='Empresa'/>
+                <!-- <field name='letra' string=''/>
+                <field name='deta0' string=''/>
+                <field name='deta1' string=''/>
+                <field name='deta2' string=''/>
+                <field name='p1era' string=''/>
+                <field name='p2da' string=''/> -->
+            </tree>
+        </field>
+    </record>
+</odoo>

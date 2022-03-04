@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id='rf_corregimientos_form' model='ir.ui.view'>
+        <field name="name">rf.corregimientos</field>
+        <field name="model">rf.corregimientos</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='cia' />
+                            <field name='tipo' />
+                            <field name='codigo' />
+                            <field name='descrip' />
+                            <field name='tags' />
+                        </group>
+                        <group>
+                            <field name='p0' />
+                            <field name='p1' />
+                            <field name='p2' />
+                            <field name='p3' />
+                            <field name='ubi' />
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_corregimientos_tree' model='ir.ui.view'>
+        <field name="name">rf.corregimientos</field>
+        <field name="model">rf.corregimientos</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='cia' />
+                <field name='tipo' />
+                <field name='codigo' />
+                <field name='descrip' />
+                <field name='tags' />
+                <field name='p0' />
+                <field name='p1' />
+                <field name='p2' />
+                <field name='p3' />
+                <field name='ubi' />
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

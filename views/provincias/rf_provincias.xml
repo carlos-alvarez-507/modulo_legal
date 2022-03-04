@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id='rf_provincias_form' model='ir.ui.view'>
+        <field name="name">rf.provincias</field>
+        <field name="model">rf.provincias</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='cia' />
+                            <field name='tipo' />
+                            <field name='codigo' />
+                            <field name='descrip' />
+                            <field name='tags' />
+                        </group>
+                        <group>
+                            <field name='p0' />
+                            <field name='p1' />
+                            <field name='p2' />
+                            <field name='p3' />
+                            <field name='ubi' />
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_provincias_tree' model='ir.ui.view'>
+        <field name="name">rf.provincias</field>
+        <field name="model">rf.provincias</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='cia' string='Empresa'/>
+                <field name='tipo' string='Tipo'/>
+                <field name='codigo' string='Código'/>
+                <field name='descrip' string='Descripción'/>
+                <field name='tags' string='Tags'/>
+                <!-- <field name='p0' string=''/>
+                <field name='p1' string=''/>
+                <field name='p2' string=''/>
+                <field name='p3' string=''/>
+                <field name='ubi' string=''/> -->
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

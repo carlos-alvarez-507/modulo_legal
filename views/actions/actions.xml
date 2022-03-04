@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<odoo>
+
+    <!-- Demandas -->
+    <record id='demandas_action' model='ir.actions.act_window'>
+        <field name='name'>Demandas</field>
+        <field name='res_model'>rf.demandas</field>
+        <field name='view_mode'>tree,form,kanban</field>
+    </record>
+
+    <!-- Notes -->
+    <record id='notas_action' model='ir.actions.act_window'>
+        <field name='name'>notes</field>
+        <field name='res_model'>rf.notes</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+
+    <!-- Abogados -->
+    <record id='abogados_action' model='ir.actions.act_window'>
+        <field name='name'>abogados</field>
+        <field name='res_model'>rf.abogados</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <!-- Juzados -->
+    <record id='juzgados_action' model='ir.actions.act_window'>
+        <field name='name'>juzgados</field>
+        <field name='res_model'>rf.juzgados</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+
+    
+    <!-- Historial de abogados -->
+    <record id='abosust_action' model='ir.actions.act_window'>
+        <field name='name'>Historial</field>
+        <field name='res_model'>rf.abosust</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+       
+    <!-- Bien Embargable -->
+    <record id='bienembargable_action' model='ir.actions.act_window'>
+        <field name='name'>Bien Embargable</field>
+        <field name='res_model'>rf.bienembargable</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <!-- Corregimientos -->
+    <record id='corregimientos_action' model='ir.actions.act_window'>
+        <field name='name'>Corregimientos</field>
+        <field name='res_model'>rf.corregimientos</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <!-- Distritos -->
+    <record id='distritos_action' model='ir.actions.act_window'>
+        <field name='name'>Distritos</field>
+        <field name='res_model'>rf.distritos</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+
+    <!-- Provincias -->
+    <record id='provincias_action' model='ir.actions.act_window'>
+        <field name='name'>provincias</field>
+        <field name='res_model'>rf.provincias</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+     <!-- Demo Cliente  -->
+    <record id='democlientes_action' model='ir.actions.act_window'>
+        <field name='name'>Demo Client</field>
+        <field name='res_model'>demo.clientes</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+    
+</odoo>

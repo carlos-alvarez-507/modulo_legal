@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id='demopartner_form' model='ir.ui.view'>
+        <field name="name">rf.demopartner.form.view</field>
+        <field name="model">demo.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <div>
+                    <div>
+                        <div>Nombre:</div>
+                        <field name='nombre' />
+                    </div>
+                    <div>
+                        <div>Númbero de Registro:</div>
+                        <field name='numero_registro' />
+                    </div>
+                    <div>
+                        <div>Cédula</div>
+                        <field name='cedula' />
+                    </div>
+                </div>
+            </form>
+            
+        </field>
+    </record>
+
+
+    <record id='demopartner_tree' model='ir.ui.view'>
+        <field name="name">rf.demopartner.tree.view</field>
+        <field name="model">demo.partner</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='nombre' string='Nombre'/>
+                <field name='numero_registro'  string='Numero de Registro'/>
+                <field name='cedula'  string='Cédula'/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='partner_action' model='ir.actions.act_window'>
+        <field name='name'>partner</field>
+        <field name='res_model'>demo.partner</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+
+</odoo>

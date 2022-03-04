@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id='rf_democliente_form' model='ir.ui.view'>
+        <field name="name">demo.clientes</field>
+        <field name="model">demo.clientes</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name='cia' />
+                        <field name='ctacliente' />
+                        <field name='tipo' />
+                        <field name='nombre' />
+                        <field name='ruced' />
+                    </group>
+                </group>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_democliente_tree' model='ir.ui.view'>
+        <field name="name">demo.clientes</field>
+        <field name="model">demo.clientes</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='cia' string='Empresa'/>
+                <field name='ctacliente' string='Cuenta Cliente'/>
+                <field name='tipo' string='Tipo'/>
+                <field name='nombre' string='Nombre'/>
+                <field name='ruced' string='Cédula'/>
+            </tree>
+        </field>
+    </record>
+</odoo>

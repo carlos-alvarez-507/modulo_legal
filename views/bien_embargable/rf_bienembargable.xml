@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id='rf_bienembargable_form' model='ir.ui.view'>
+        <field name="name">rf.bienembargable</field>
+        <field name="model">rf.bienembargable</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name='codigo' class='form-control' />
+                            <field name='descripcion' class='form-control' />
+                            <field name='tipo' class='form-control' />
+                            <field name='ckpb' class='form-control' />
+                            <field name='monto' class='form-control' />
+                            <field name='ctacont' class='form-control' />
+                            <field name='cia' class='form-control' />
+                        </group>
+                        <group>
+                            <field name='letra' class='form-control' />
+                            <field name='deta0' class='form-control' />
+                            <field name='deta1' class='form-control' />
+                            <field name='deta2' class='form-control' />
+                            <field name='p1era' class='form-control' />
+                            <field name='p2da' class='form-control' />
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_bienembargable_tree' model='ir.ui.view'>
+        <field name="name">rf.bienembargable</field>
+        <field name="model">rf.bienembargable</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='codigo' string='Código'/>
+                <field name='descripcion' string='Descripción'/>
+                <field name='tipo' string='Tipo'/>
+                <!-- <field name='ckpb' string=''/> -->
+                <field name='monto' string='Monto'/>
+                <field name='ctacont' string='Cuenta Contable'/>
+                <field name='cia' string='Empresa'/>
+                <!-- <field name='letra' string=''/>
+                <field name='deta0' string=''/>
+                <field name='deta1' string=''/>
+                <field name='deta2' string=''/>
+                <field name='p1era' string=''/>
+                <field name='p2da' string=''/> -->
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

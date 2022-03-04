@@ -1,0 +1,148 @@
+.noti-layout{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 6fr 3fr 3fr 3fr;
+    grid-template-areas:
+      "header header h-second h-third h-fourth h-fifth"
+      "recap fecha fields fields fourth fifth"
+      "second second fields fields fourth fifth"
+      "second second fields fields fourth fifth"
+      "n-field n-fields fields fields fourth fifth";
+  
+    /* background-color: chocolate; */
+    background-color: #88ff80;
+    padding: 18px;
+}
+
+.fecha{
+    grid-area: fecha;
+    /* background-color: violet; */
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    /* background-color: tomato; */
+}
+
+.padding-right{
+    padding-right: 12px;
+}
+
+
+
+.n-menu{
+    /* grid-area: second; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    padding-top: 8px;
+}
+
+.n-st,
+.n-nd,
+.n-third {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.n-fecha-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.n-fecha-menu{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-end;
+    padding-top: 8px;
+    width:100%;
+    /* background-color: turquoise; */
+}
+
+.n-fecha-title{
+    /* background-color: turquoise; */
+    padding-top: 12px;
+    align-self: flex-start;
+
+}
+
+
+.n-flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.n-padding-title{
+    padding: 4px;
+}
+
+.total-width{
+    width:100%;
+}
+
+/* #n-fecha-noti{
+    align-self: flex-end;
+} */
+
+.n-footer{
+    grid-area:n-fields;
+    /* background-color: tomato; */
+}
+
+.nf-cont{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'title-solicitudes title-denuncias'
+                          'ts-fields td-fields';
+}
+
+.title-solicitudes{
+    grid-area: title-solicitudes;
+    /* background-color: tomato; */
+    width: 100%;
+}
+
+.ts-fields{
+    grid-area: ts-fields;
+    /* background-color: red; */
+    width: 100%;
+}
+
+.title-denuncias{
+    grid-area: title-denuncias;
+    /* background-color: yellow; */
+    width: 100%;
+}
+
+.td-fields{
+    grid-area: td-fields;
+    /* background-color: purple; */
+    width: 100%;
+}
+
+
+.ts-cont,
+.td-cont,
+.tsf-cont,
+.tdf-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+}
+
+.align-title-flex-start{
+    align-self: flex-start;
+}

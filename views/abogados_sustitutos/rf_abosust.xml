@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id='rf_abosust_form' model='ir.ui.view'>
+        <field name="name">rf.abosust.form.view</field>
+        <field name="model">rf.abosust</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>                        
+                        <field name='create_date' />
+                        <field name='demanda_id' />
+                        <field name='cntacliente' />
+                        <field name='abogado_descripcion' />
+                        <field name='desde' />                       
+                    </group>                  
+                    <group>
+                        <field name='hasta' />
+                        <field name='renglon' />
+                        <field name='clave' />
+                        <field name='tcli' />
+                        <field name='cia' />
+                        <field name='codtran' />
+                    </group>  
+                </group>
+            </form>
+
+        </field>
+    </record>
+
+
+    <record id='rf_abosust_tree' model='ir.ui.view'>
+        <field name="name">rf.abosust.tree.view</field>
+        <field name="model">rf.abosust</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='create_date' string='Fecha de Creación'/>
+                <field name='desde' string='Desde'/>
+                <field name='hasta' string='Hasta'/>
+                <!-- <field name='demanda_id' string='Código de Demanda'/> -->
+                <!-- <field name='cntacliente' string='Cuenta Cliente'/> -->
+                <field name='abogado_descripcion' string='Abogado'/>
+                <!-- <field name='renglon' string='Renglon'/>
+                <field name='clave' string='Clave'/>
+                <field name='tcli' string='Tipo'/>
+                <field name='cia' string='Empresa'/>
+                <field name='codtran' string='Código De Transacción'/> -->
+            </tree>
+        </field>
+    </record>
+</odoo>

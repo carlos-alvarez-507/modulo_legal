@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <!-- tree view -->
+    <record id='autor_tree_view' model='ir.ui.view'>
+        <field name='name'>rf.demandas.tree.view</field>
+        <field name='model'>rf.demandas</field>
+        <field name='arch' type='xml'>
+            <tree string='Demandas'>
+                <field name='codigo_demanda' string='Código Demanda'/>
+                <field name='sucursal' string='Empresa'/>
+                <!-- <field name='codigo_demanda' string='ID' /> -->
+                <field name='cedula' string='Cédula' />
+                <field name='cliente_nombre' string='Cliente'/>
+                <field name='fecha_reg' string='Fecha de Demanda'/>
+                <field name='monto_demanda' string='Monto' />
+                <field name='juzgado' string='Juzgado'/>
+                <field name='abogado' string='Abogado' />
+                <field name='provincia' string='Provincia'/>
+            </tree>
+        </field>
+    </record>
+</odoo>
