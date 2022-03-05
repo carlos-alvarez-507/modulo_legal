@@ -39,8 +39,8 @@ class Notas(models.Model):
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.cntacliente = demanda_activa.cntacliente
 
-    cntacliente = fields.Char()  # TODO:
-    # cntacliente = fields.Char(compute='_get_cntacliente_from_rfdemanda')
+    # cntacliente = fields.Char()  # TODO:
+    cntacliente = fields.Char(compute='_get_cntacliente_from_rfdemanda')
 
     # ..............................................................................................................................Notes
     notes = fields.Html(string='OBERVACIONES: ')
@@ -56,8 +56,8 @@ class Notas(models.Model):
         # item.creacion_fecha =  self.create_date.date() - timedelta(days=7) #  tomamos la fecha de creacion del campo create_date y restamos 7 dias
         # item.creacion_fecha =  self.create_date.date() #  tomamos la fecha de creacion del campo create_date sin restarle 7 dias.
 
-    creacion_fecha = fields.Datetime() #TODO:
-    # creacion_fecha = fields.Datetime(default=_create_date_compute, store=True)  # fecha de creacion
+    # creacion_fecha = fields.Datetime() #TODO:
+    creacion_fecha = fields.Datetime(default=_create_date_compute, store=True)  # fecha de creacion
 
 
     @api.depends('creacion_fecha')
@@ -69,8 +69,8 @@ class Notas(models.Model):
             else:
                 item.age_of_creation = 0
 
-    age_of_creation = fields.Integer() #TODO:
-    # age_of_creation = fields.Integer(compute=_create_age_of_creation, store=True)  # dias de creacion
+    # age_of_creation = fields.Integer() #TODO:
+    age_of_creation = fields.Integer(compute=_create_age_of_creation, store=True)  # dias de creacion
 
     # ......................................................................................................................Usuario
 
@@ -125,8 +125,8 @@ class Notas(models.Model):
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.tcli = demanda_activa.tcli
 
-    tcli = fields.Char() #TODO:
-    # tcli = fields.Char(compute='_get_tcli')  # TODO: Para import la data, es necesario utilizar el campo como fields.Char() y luego comentarlo y descomentarr la el campo como fields.Char(compute=''). Esto es xq necesitamos tenerlo como compute para poder computar los valores a la hora de crear los records pero como los campos computes no nos permiten importar data entonces necestimos compentarlo y utilizar la opcion no computada a la hora de importar la data.
+    # tcli = fields.Char() #TODO:
+    tcli = fields.Char(compute='_get_tcli')  # TODO: Para import la data, es necesario utilizar el campo como fields.Char() y luego comentarlo y descomentarr la el campo como fields.Char(compute=''). Esto es xq necesitamos tenerlo como compute para poder computar los valores a la hora de crear los records pero como los campos computes no nos permiten importar data entonces necestimos compentarlo y utilizar la opcion no computada a la hora de importar la data.
 
     # .......................................................................................................................... TCLI DESCRIPCION
 
@@ -140,8 +140,8 @@ class Notas(models.Model):
             else:
                 item.tcli_desc = 'CLIENTE ' + str(item.tcli)
 
-    tcli_desc = fields.Char()  # TODO:
-    # tcli_desc = fields.Char(compute='_compute_tcli_desc')
+    # tcli_desc = fields.Char()  # TODO:
+    tcli_desc = fields.Char(compute='_compute_tcli_desc')
 
     # .......................................................................................................................... sist
     sist = fields.Char()

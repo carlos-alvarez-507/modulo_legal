@@ -37,7 +37,7 @@ class Demandas(models.Model):
 
     title_demanda = fields.Char(compute='_compute_title', store=True)
 
-    # tcli = fields.Selection([('P', 'Natural'), ('F', 'Jurídica')], string='CLIENTE') # TODO:
+    # tcli = fields.Selection([('P', 'Natural'), ('F', 'Jurídica')], string='CLIENTE') 
     tcli = fields.Char(related='cedula.tipo', string='Cliente')
 
     # .......................................................................................................................... TCLI DESCRIPCION   
@@ -64,20 +64,20 @@ class Demandas(models.Model):
 
 
 
-    cntaprestamo = fields.Char(string='Cuenta de Prestamo') #TODO: trabajar en la relacion de la cuenta prestamo
-    # cntaprestamo = fields.Char(compute='_get_cnta_prestamo') #TODO: Crear esta funcion de llegar a ser necesario
+    cntaprestamo = fields.Char(string='Cuenta de Prestamo') # trabajar en la relacion de la cuenta prestamo
+    # cntaprestamo = fields.Char(compute='_get_cnta_prestamo') # Crear esta funcion de llegar a ser necesario
 
 
     ck_crear = fields.Boolean(string='Mostrar / Crear')
 
-    # ---------------------------------------------------------------COMPUTAR ESTE CAMPO TODO:
+    # ---------------------------------------------------------------COMPUTAR ESTE CAMPO 
     # demanda_nombre = fields.Selection([('demandaa', 'demanda A'), ('demandab', 'demanda B')], 'DEMANDA: ')
     demanda_nombre = fields.Char(compute='_compute_demanda')
 
     # ------------------------------------------------------------------RELACIONAR ESTE CAMPO CON LA TABLA DE SUCURSALES (ACTUALIZR EL LOG DE DEMANDAS PARA QUE APUNTEN AL CODIGO CORECTO ESTABLECIDO POR ROBINSON)
     # sucursal = fields.Selection([('sucursala', 'sucursal A'), ('sucursalb', 'sucursal B')], 'SUCURSAL: ')
     sucursal = fields.Many2one('res.company', string='Sucursal')
-    # sucursal = fields.Char(related='sucursal_name.id', string='SUCURSAL NUMERO: ') # TODO: actualizar este campo para que apunte al campo correct el cual no es id sino numero_empresa   
+    # sucursal = fields.Char(related='sucursal_name.id', string='SUCURSAL NUMERO: ') #  actualizar este campo para que apunte al campo correct el cual no es id sino numero_empresa   
     
 
     code_sucursal = fields.Integer(related='sucursal.id')
