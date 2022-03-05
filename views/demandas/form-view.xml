@@ -35,7 +35,7 @@
                    <div class="container">
                     <div class='row'>
                         <div class="col-md-12">
-                            <field name='title_demanda' class='text-info font-weight-bold' style='font-size: 14px; font-weight: 700'/>
+                            <field name='title_demanda' class='font-weight-bold' style='font-size: 14px; font-weight: 700'/>
                         </div>                        
                     </div>
                     <div class='row'>
@@ -49,15 +49,15 @@
                                                     <div class="form-row mt-2">
                                                         <div class="form-group col-md-4">
                                                             <label for="fecha_reg">FECHA REG: </label>
-                                                            <field name="fecha_reg" class="form-control text-info font-weight-bold" id='fecha_reg'/>
+                                                            <field name="fecha_reg" class="form-control font-weight-bold" id='fecha_reg'/>
                                                         </div>
                                                         <div class="form-group col-md-4">
                                                             <label for="tcli_desc">CLIENTE:</label>
-                                                            <field name="tcli_desc" id='tcli_desc' class='form-control text-info font-weight-bold' />
+                                                            <field name="tcli_desc" id='tcli_desc' class='form-control font-weight-bold' />
                                                         </div>
                                                         <div class="form-group col-md-4">
                                                             <label for="cntacliente">No. REGISTRO: </label>
-                                                            <field name="cntacliente" class="form-control text-info font-weight-bold" id='cntacliente' />
+                                                            <field name="cntacliente" class="form-control font-weight-bold" id='cntacliente' />
                                                         </div>
                                                     </div>
             
@@ -65,7 +65,7 @@
                                                     <div class="form-row mt-2">
                                                         <div class="form-group col-md-2">
                                                             <label for="cedula">No. ID: </label>
-                                                            <field name='cedula' class="form-control text-info font-weight-bold" id="cedula" placeholder="9-999-9999" />
+                                                            <field name='cedula' class="form-control font-weight-bold" id="cedula" placeholder="9-999-9999" />
                                                         </div>
                                                         <div class="form-group col-md-2 d-flex align-items-center justify-content-center ">
                                                             <div class="form-check d-flex align-items-center justify-content-start">
@@ -77,7 +77,7 @@
                                                         </div>
                                                         <div class="form-group col-md-3">
                                                             <label for="demanda_nombre">DEMANDA: </label>
-                                                            <field name='demanda_nombre' class="form-control text-info font-weight-bold" id="demanda_nombre" attrs="{'readonly': [('ck_crear','=',False)]}" />
+                                                            <field name='demanda_nombre' class="form-control font-weight-bold" id="demanda_nombre" attrs="{'readonly': [('ck_crear','=',False)]}" />
                                                         </div>
             
                                                         <div class="form-group d-flex align-items-center justify-content-center col-md-2">
@@ -86,7 +86,7 @@
             
                                                         <div class="form-group  col-md-3">
                                                             <label for="sucursal">SUCURSAL: </label>
-                                                            <field name="sucursal" id='sucursal' class="form-control text-info font-weight-bold" />
+                                                            <field name="sucursal" id='sucursal' class="form-control font-weight-bold" />
                                                         </div>
                                                     </div>
             
@@ -94,7 +94,7 @@
                                                     <div class="form-row mt-2">
                                                         <div class="form-group col-md-6">
                                                             <label for="cliente_nombre">NOMBRE: </label>
-                                                            <field name='cliente_nombre' class="form-control text-info font-weight-bold " id="cliente_nombre" />
+                                                            <field name='cliente_nombre' class="form-control font-weight-bold " id="cliente_nombre" />
                                                         </div>
             
                                                         <div class="form-group col-md-6">
@@ -129,11 +129,11 @@
                                                             <div class="row mt-2">
                                                                 <div class="form-group col-md-6">
                                                                     <label for="fecha_demanda">FECHA DEMANDA: </label>
-                                                                    <field name="fecha_demanda" class="form-control text-info font-weight-bold" id="fecha_demanda" />
+                                                                    <field name="fecha_demanda" class="form-control font-weight-bold" id="fecha_demanda" />
                                                                 </div>
                                                                 <div class="form-group col-md-6 ">
                                                                     <label for="monto_demanda">Monto $: </label>
-                                                                    <field name="monto_demanda" class="form-control text-info font-weight-bold" id="monto_demanda" />
+                                                                    <field name="monto_demanda" class="form-control font-weight-bold" id="monto_demanda" />
                                                                 </div>
                                                             </div>
                                                             <div class="row mt-2">
@@ -189,11 +189,11 @@
                                                     <div class="form-row mt-2">
                                                         <div class="form-group col-md-6">
                                                             <label for="codigo_demanda">IDENTIFICADOR DEMANDA: </label>
-                                                            <field name="codigo_demanda" class="form-control text-info font-weight-bold" id="codigo_demanda" />
+                                                            <field name="codigo_demanda" class="form-control font-weight-bold" id="codigo_demanda" />
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label for="cntaprestamo">CUENTA DE PRESTAMO: </label>
-                                                            <field name="cntaprestamo" class="form-control text-info font-weight-bold" id="cntaprestamo"/>
+                                                            <field name="cntaprestamo" class="form-control font-weight-bold" id="cntaprestamo"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -230,7 +230,7 @@
                                                                     <field name='sec_fc_visivility' class="form-check-input"  attrs="{ 'readonly': [('sec_fianza','=',False)]}" />
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="sec_fecha_consignacion" class="form-control text-info font-weight-bold" attrs="{ 'readonly': [('sec_fc_visivility','=',False)]}"/>
+                                                                    <field name="sec_fecha_consignacion" class="form-control font-weight-bold" attrs="{ 'readonly': [('sec_fc_visivility','=',False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -254,7 +254,7 @@
                                                                     <label for="sec_fianza_monto">Monto $: </label>
                                                                 </div>
                                                                 <div class="col-md-9">
-                                                                    <field name="sec_fianza_monto" class="form-control text-info font-weight-bold" id="sec_fianza_monto" />
+                                                                    <field name="sec_fianza_monto" class="form-control font-weight-bold" id="sec_fianza_monto" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -267,7 +267,7 @@
                                                                     <field name='sec_df_visivility' class="form-check-input" attrs="{'readonly': [('sec_devolucion_fianza','=',False)]}" />
                                                                 </div>
                                                                 <div class="col-md-9">
-                                                                    <field name="sec_devolucion_fianza_fecha" class="form-control text-info font-weight-bold" attrs="{'readonly': [('sec_df_visivility','=',False)]}"/>
+                                                                    <field name="sec_devolucion_fianza_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('sec_df_visivility','=',False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -293,7 +293,7 @@
                                                                     <field name='sec_fr_visivility' class="form-check-input" />
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="sec_fecha_retiro" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('sec_fr_visivility','=',False)]}"/>
+                                                                    <field name="sec_fecha_retiro" class="form-control font-weight-bold"  attrs="{'readonly': [('sec_fr_visivility','=',False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -309,7 +309,7 @@
                                                                     <field name='sec_fa_visivility' class="form-check-input" />
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="sec_fecha_auto" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('sec_fa_visivility','=',False)]}"/>
+                                                                    <field name="sec_fecha_auto" class="form-control font-weight-bold"  attrs="{'readonly': [('sec_fa_visivility','=',False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -319,7 +319,7 @@
                                                                     <label for="sec_num_auto"></label>
                                                                 </div>
                                                                 <div class="col-md-9">
-                                                                    <field name="sec_num_auto" class="form-control text-info font-weight-bold" id="sec_num_auto" />
+                                                                    <field name="sec_num_auto" class="form-control font-weight-bold" id="sec_num_auto" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -335,7 +335,7 @@
                                                                     <field name='sec_fo_visivility' class="form-check-input" />
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="sec_fecha_oficio" class="form-control text-info font-weight-bold" attrs="{'readonly': [('sec_fo_visivility','=',False)]}" />
+                                                                    <field name="sec_fecha_oficio" class="form-control font-weight-bold" attrs="{'readonly': [('sec_fo_visivility','=',False)]}" />
                                                                 </div> 
                                                             </div>
                                                         </div>
@@ -345,7 +345,7 @@
                                                                     <label for="sec_num_oficio"></label>
                                                                 </div>
                                                                 <div class="col-md-9">
-                                                                    <field name="sec_num_oficio" class="form-control text-info font-weight-bold" id="sec_num_oficio" />
+                                                                    <field name="sec_num_oficio" class="form-control font-weight-bold" id="sec_num_oficio" />
                                                                 </div>
                                                             </div>
                                                             <div class="row px-4 mt-4 ">
@@ -353,7 +353,7 @@
                                                                     <label for="sec_costa"></label>
                                                                 </div>
                                                                 <div class="col-md-9">
-                                                                    <field name="sec_costa" class="form-control text-info font-weight-bold" id="sec_costa" />
+                                                                    <field name="sec_costa" class="form-control font-weight-bold" id="sec_costa" />
                                                                 </div>
                                                             </div>
                                                             <div class="row mt-4 px-4 ">
@@ -361,7 +361,7 @@
                                                                     <label for="sec_total"></label>
                                                                 </div>
                                                                 <div class="col-md-9">
-                                                                    <field name="sec_total" class="form-control text-info font-weight-bold" id="sec_total" />
+                                                                    <field name="sec_total" class="form-control font-weight-bold" id="sec_total" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -421,17 +421,17 @@
                                                         <div class="form-group col-md-4 ">
                                                             <div class="form-row mt-4 ">
                                                                 <div class="form-group col-md-12">
-                                                                    <field name="bien_desc" class="form-control text-info font-weight-bold" id="bien_desc" attrs="{'invisible': [('bien_salario','=',True)]}"/>
+                                                                    <field name="bien_desc" class="form-control font-weight-bold" id="bien_desc" attrs="{'invisible': [('bien_salario','=',True)]}"/>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row mt-4 ">
                                                                 <div class="form-group col-md-12">
-                                                                    <field name="bien_salario_type" class="form-control text-info font-weight-bold" id="bien_salario_type" attrs="{'invisible': [('bien_finca_prop','=',True)]}"/>
+                                                                    <field name="bien_salario_type" class="form-control font-weight-bold" id="bien_salario_type" attrs="{'invisible': [('bien_finca_prop','=',True)]}"/>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row mt-4 ">
                                                                 <div class="form-group col-md-12">
-                                                                    <field name="bien_planilla_type" class="form-control text-info font-weight-bold" id="bien_planilla_type" attrs="{'invisible': [('bien_finca_prop','=',True)]}" />
+                                                                    <field name="bien_planilla_type" class="form-control font-weight-bold" id="bien_planilla_type" attrs="{'invisible': [('bien_finca_prop','=',True)]}" />
                                                                 </div>
                                                             </div>
             
@@ -447,7 +447,7 @@
                                                               <!-- Planilla Dynamic -->
                                                               <div class="form-row mt-4 " attrs="{'invisible': ['|', ('bien_finca_prop','=',True), ('bien_planilla_type','=','planillab')]}">
                                                                 <div class="form-group col-md-12">
-                                                                    <field class="form-control text-info font-weight-bold" name='bien_planilla_id'/>
+                                                                    <field class="form-control font-weight-bold" name='bien_planilla_id'/>
                                                                 </div>
                                                             </div>
             
@@ -459,7 +459,7 @@
                                                                             <label for="bien_ministerio"></label>
                                                                         </div>
                                                                         <div class="col-md-9">
-                                                                            <field name="bien_ministerio" class="form-control text-info font-weight-bold" id="bien_ministerio" />
+                                                                            <field name="bien_ministerio" class="form-control font-weight-bold" id="bien_ministerio" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -472,7 +472,7 @@
                                                                             <label for="bien_planilla"></label>
                                                                         </div>
                                                                         <div class="col-md-9">
-                                                                            <field name="bien_planilla" class="form-control text-info font-weight-bold" id="bien_planilla" />
+                                                                            <field name="bien_planilla" class="form-control font-weight-bold" id="bien_planilla" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -485,7 +485,7 @@
                                                                             <label for="bien_posicion"></label>
                                                                         </div>
                                                                         <div class="col-md-9">
-                                                                            <field name="bien_posicion" class="form-control text-info font-weight-bold" id="bien_posicion" />
+                                                                            <field name="bien_posicion" class="form-control font-weight-bold" id="bien_posicion" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -522,7 +522,7 @@
                                                                 </div>
                                                                 <div class="col-md-7">
                                                                     <div class="row">
-                                                                        <field name="noti_fecha" class="form-control text-info font-weight-bold" attrs="{'readonly': [('noti_nf_visivility','=',False)]}" />
+                                                                        <field name="noti_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('noti_nf_visivility','=',False)]}" />
                                                                     </div>
                                                                     <div class="row px-4 mt-4">
                                                                         <div class="form-group col-md-12 ">
@@ -556,7 +556,7 @@
                                                                     <div class="form-row mt-2">
                                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-center">
                                                                             <label for="noti_abogado_nombre"></label>
-                                                                            <field name='noti_abogado_nombre' class="form-control text-info font-weight-bold" id="noti_abogado_nombre"  attrs="{'readonly': [('noti_abogado', '=', False)]}"/>
+                                                                            <field name='noti_abogado_nombre' class="form-control font-weight-bold" id="noti_abogado_nombre"  attrs="{'readonly': [('noti_abogado', '=', False)]}"/>
                                                                         </div>
                                                                     </div>
             
@@ -576,7 +576,7 @@
                                                                         </div>
                                                                         <div class="col-md-7">
                                                                             <div class="row">
-                                                                                <field name="noti_transaction_fecha" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('noti_tf_visivility', '=', False)]}"/>
+                                                                                <field name="noti_transaction_fecha" class="form-control font-weight-bold"  attrs="{'readonly': [('noti_tf_visivility', '=', False)]}"/>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -604,7 +604,7 @@
                                                                 </div>
                                                                 <div class="col-md-7">
                                                                     <div class="row">
-                                                                        <field name="noti_solicitud_fecha" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('noti_sf_visivility', '=', False)]}" />
+                                                                        <field name="noti_solicitud_fecha" class="form-control font-weight-bold"  attrs="{'readonly': [('noti_sf_visivility', '=', False)]}" />
                                                                     </div>
                                                                 </div>
             
@@ -628,7 +628,7 @@
                                                                 </div>
                                                                 <div class="col-md-7">
                                                                     <div class="row">
-                                                                        <field name="noti_db_fecha" class="form-control text-info font-weight-bold" attrs="{'readonly': [('noti_db_visivility', '=', False)]}" />
+                                                                        <field name="noti_db_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('noti_db_visivility', '=', False)]}" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -664,7 +664,7 @@
                                                             <field name='emb_fr_visivility' class="form-check-input" attrs="{'readonly': [('embargo_visibility', '=', False)]}" />
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="emb_fecha_retiro" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('emb_fr_visivility', '=', False)]}" />
+                                                            <field name="emb_fecha_retiro" class="form-control font-weight-bold"  attrs="{'readonly': [('emb_fr_visivility', '=', False)]}" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -679,7 +679,7 @@
                                                             <field name='emb_fa_visivility' class="form-check-input"   attrs="{'readonly': [('embargo_visibility', '=', False)]}"/>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="emb_fecha_auto" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('emb_fa_visivility', '=', False)]}"/>
+                                                            <field name="emb_fecha_auto" class="form-control font-weight-bold"  attrs="{'readonly': [('emb_fa_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -689,7 +689,7 @@
                                                             <label for="emb_num_auto"></label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <field name="emb_num_auto" class="form-control text-info font-weight-bold" id="emb_num_auto" attrs="{'readonly': [('emb_fa_visivility', '=', False)]}" />
+                                                            <field name="emb_num_auto" class="form-control font-weight-bold" id="emb_num_auto" attrs="{'readonly': [('emb_fa_visivility', '=', False)]}" />
                                                         </div>
                                                     </div>
             
@@ -706,7 +706,7 @@
                                                             <field name='emb_fo_visivility' class="form-check-input"  attrs="{'readonly': [('embargo_visibility', '=', False)]}" />
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="emb_fecha_oficio" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
+                                                            <field name="emb_fecha_oficio" class="form-control font-weight-bold"  attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -716,7 +716,7 @@
                                                             <label for="emb_num_oficio"></label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <field name="emb_num_oficio" class="form-control text-info font-weight-bold" id="emb_num_oficio"  attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
+                                                            <field name="emb_num_oficio" class="form-control font-weight-bold" id="emb_num_oficio"  attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                     <div class="row px-4 mt-4 ">
@@ -724,7 +724,7 @@
                                                             <label for="emb_costas"></label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <field name="emb_costas" class="form-control text-info font-weight-bold" id="emb_costas"   attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
+                                                            <field name="emb_costas" class="form-control font-weight-bold" id="emb_costas"   attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                     <div class="row px-4 mt-4 ">
@@ -732,7 +732,7 @@
                                                             <label for="emb_total"></label>
                                                         </div>
                                                         <div class="col-md-9">
-                                                            <field name="emb_total" class="form-control text-info font-weight-bold" id="emb_total"  attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
+                                                            <field name="emb_total" class="form-control font-weight-bold" id="emb_total"  attrs="{'readonly': [('emb_fo_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -759,7 +759,7 @@
                                                             <field name='adj_finca_fr_visivility' class="form-check-input" attrs="{'readonly': [('adj_finca', '=', False)]}"/>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="adj_finca_fecha_retiro" class="form-control text-info font-weight-bold" attrs="{'readonly': [ ('adj_finca_fr_visivility', '=', False)]}"/>
+                                                            <field name="adj_finca_fecha_retiro" class="form-control font-weight-bold" attrs="{'readonly': [ ('adj_finca_fr_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -774,7 +774,7 @@
                                                             <field name='adj_emb_fa_visivility_st' class="form-check-input" attrs="{'readonly': [('adj_finca', '=', False)]}"/>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="adj_emb_fecha_auto_st" class="form-control text-info font-weight-bold" attrs="{'readonly': [ ('adj_emb_fa_visivility_st', '=', False)]}"/>
+                                                            <field name="adj_emb_fecha_auto_st" class="form-control font-weight-bold" attrs="{'readonly': [ ('adj_emb_fa_visivility_st', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -784,7 +784,7 @@
                                                             <label for="adj_num_auto_st"></label>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="adj_num_auto_st" class="form-control text-info font-weight-bold" id="adj_num_auto_st" attrs="{'readonly': [ ('adj_emb_fa_visivility_st', '=', False)]}"/>
+                                                            <field name="adj_num_auto_st" class="form-control font-weight-bold" id="adj_num_auto_st" attrs="{'readonly': [ ('adj_emb_fa_visivility_st', '=', False)]}"/>
                                                         </div>
                                                     </div>
             
@@ -795,7 +795,7 @@
                                                             <label for="adj_costas"></label>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="adj_costas" class="form-control text-info font-weight-bold" id="adj_costas"  attrs="{'readonly': [ ('adj_emb_fa_visivility_st', '=', False)]}"/>
+                                                            <field name="adj_costas" class="form-control font-weight-bold" id="adj_costas"  attrs="{'readonly': [ ('adj_emb_fa_visivility_st', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -811,7 +811,7 @@
                                                             <field name='adj_emb_fa_visivility_nd' class="form-check-input" attrs="{'readonly': [('adj_finca', '=', False)]}"/>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="adj_emb_fecha_auto_nd" class="form-control text-info font-weight-bold" attrs="{'readonly': [ ('adj_emb_fa_visivility_nd', '=', False)]}"/>
+                                                            <field name="adj_emb_fecha_auto_nd" class="form-control font-weight-bold" attrs="{'readonly': [ ('adj_emb_fa_visivility_nd', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -821,7 +821,7 @@
                                                             <label for="adj_num_auto_nd"></label>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="adj_num_auto_nd" class="form-control text-info font-weight-bold" id="adj_num_auto_nd" attrs="{'readonly': [ ('adj_emb_fa_visivility_nd', '=', False)]}"/>
+                                                            <field name="adj_num_auto_nd" class="form-control font-weight-bold" id="adj_num_auto_nd" attrs="{'readonly': [ ('adj_emb_fa_visivility_nd', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -832,7 +832,7 @@
                                                             <label for="sec_total"></label>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <field name="sec_total" class="form-control text-info font-weight-bold" id="sec_total" attrs="{'readonly': [ ('adj_emb_fa_visivility_nd', '=', False)]}"/>
+                                                            <field name="sec_total" class="form-control font-weight-bold" id="sec_total" attrs="{'readonly': [ ('adj_emb_fa_visivility_nd', '=', False)]}"/>
                                                         </div>
                                                     </dic>
                                                 </div>
@@ -848,7 +848,7 @@
                                                             <field name='adj_finca_fs_visivility' class="form-check-input"  attrs="{'readonly': [('adj_finca', '=', False)]}"/>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="adj_finca_fecha_solic_remate" class="form-control text-info font-weight-bold"  attrs="{'readonly': [ ('adj_finca_fs_visivility', '=', False)]}"/>
+                                                            <field name="adj_finca_fecha_solic_remate" class="form-control font-weight-bold"  attrs="{'readonly': [ ('adj_finca_fs_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -860,7 +860,7 @@
                                                             <field name='adj_finca_rj_visivility' class="form-check-input" attrs="{'readonly': [('adj_finca', '=', False)]}" />
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="adj_finca_fecha_remate_juzgado" class="form-control text-info font-weight-bold"  attrs="{'readonly': [ ('adj_finca_rj_visivility', '=', False)]}"/>
+                                                            <field name="adj_finca_fecha_remate_juzgado" class="form-control font-weight-bold"  attrs="{'readonly': [ ('adj_finca_rj_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -872,7 +872,7 @@
                                                             <label for="monto_base_remate"></label>
                                                         </div>
                                                         <div class="col-md-8">
-                                                            <field name="monto_base_remate" class="form-control text-info font-weight-bold" id="monto_base_remate"  attrs="{'readonly': [ ('adj_finca_fecha_remate_juzgado', '=', False)]}"/>
+                                                            <field name="monto_base_remate" class="form-control font-weight-bold" id="monto_base_remate"  attrs="{'readonly': [ ('adj_finca_fecha_remate_juzgado', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -909,7 +909,7 @@
                                                             <field name='ae_retiro_visivility' class="form-check-input" attrs="{'readonly': [('amp_emb', '=', False)]}" />
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="ae_retiro" class="form-control text-info font-weight-bold" attrs="{'readonly': [('ae_retiro_visivility', '=', False)]}"/>
+                                                            <field name="ae_retiro" class="form-control font-weight-bold" attrs="{'readonly': [('ae_retiro_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -926,7 +926,7 @@
                                                                     <field name='ae_fa_visivility' class="form-check-input" attrs="{'readonly': [('ae_retiro_visivility', '=', False)]}"/>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <field name="ae_fecha_auto" class="form-control text-info font-weight-bold" attrs="{'readonly': [('ae_fa_visivility', '=', False)]}"/>
+                                                                    <field name="ae_fecha_auto" class="form-control font-weight-bold" attrs="{'readonly': [('ae_fa_visivility', '=', False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -937,7 +937,7 @@
                                                                     <label for="ae_num_auto"></label>
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="ae_num_auto" class="form-control text-info font-weight-bold" id="ae_num_auto" attrs="{'readonly': [('ae_fa_visivility', '=', False)]}"/>
+                                                                    <field name="ae_num_auto" class="form-control font-weight-bold" id="ae_num_auto" attrs="{'readonly': [('ae_fa_visivility', '=', False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -953,7 +953,7 @@
                                                                     <field name='ae_fo_visivility' class="form-check-input" attrs="{'readonly': [('ae_retiro_visivility', '=', False)]}"/>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <field name="ae_fecha_oficio" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('ae_fo_visivility', '=', False)]}" />
+                                                                    <field name="ae_fecha_oficio" class="form-control font-weight-bold"  attrs="{'readonly': [('ae_fo_visivility', '=', False)]}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -964,7 +964,7 @@
                                                                     <label for="ae_num_oficio"></label>
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="ae_num_oficio" class="form-control text-info font-weight-bold" id="ae_num_oficio"  attrs="{'readonly': [('ae_fo_visivility', '=', False)]}" />
+                                                                    <field name="ae_num_oficio" class="form-control font-weight-bold" id="ae_num_oficio"  attrs="{'readonly': [('ae_fo_visivility', '=', False)]}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -980,7 +980,7 @@
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-6">
                                                     <label class="form-check-label" for="ae_bien_ampliar"></label>
-                                                    <field name="ae_bien_ampliar" id='ae_bien_ampliar' class="form-control text-info font-weight-bold" attrs="{'readonly': [('amp_emb', '=', False)]}" />
+                                                    <field name="ae_bien_ampliar" id='ae_bien_ampliar' class="form-control font-weight-bold" attrs="{'readonly': [('amp_emb', '=', False)]}" />
                                                 </div>
                                             </div>
             
@@ -1008,7 +1008,7 @@
                                                             <field name='as_fr_visivility' class="form-check-input" attrs="{'readonly': [('amp_sec', '=', False)]}" />
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <field name="as_fr" class="form-control text-info font-weight-bold" attrs="{'readonly': [('as_fr_visivility', '=', False)]}"/>
+                                                            <field name="as_fr" class="form-control font-weight-bold" attrs="{'readonly': [('as_fr_visivility', '=', False)]}"/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1025,7 +1025,7 @@
                                                                     <field name='as_fa_visivility' class="form-check-input" attrs="{'readonly': [('as_fr_visivility', '=', False)]}" />
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <field name="as_fecha_auto" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('as_fa_visivility', '=', False)]}"/>
+                                                                    <field name="as_fecha_auto" class="form-control font-weight-bold"  attrs="{'readonly': [('as_fa_visivility', '=', False)]}"/>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1036,7 +1036,7 @@
                                                                     <label for="as_num_auto"></label>
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="as_num_auto" class="form-control text-info font-weight-bold" id="as_num_auto" attrs="{'readonly': [('as_fa_visivility', '=', False)]}" />
+                                                                    <field name="as_num_auto" class="form-control font-weight-bold" id="as_num_auto" attrs="{'readonly': [('as_fa_visivility', '=', False)]}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1052,7 +1052,7 @@
                                                                     <field name='as_fo_visivility' class="form-check-input"  attrs="{'readonly': [('as_fr_visivility', '=', False)]}"/>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <field name="as_fecha_oficio" class="form-control text-info font-weight-bold" attrs="{'readonly': [('as_fo_visivility', '=', False)]}" />
+                                                                    <field name="as_fecha_oficio" class="form-control font-weight-bold" attrs="{'readonly': [('as_fo_visivility', '=', False)]}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1063,7 +1063,7 @@
                                                                     <label for="as_num_oficio"></label>
                                                                 </div>
                                                                 <div class="col-md-7">
-                                                                    <field name="as_num_oficio" class="form-control text-info font-weight-bold" id="as_num_oficio"  attrs="{'readonly': [('as_fo_visivility', '=', False)]}" />
+                                                                    <field name="as_num_oficio" class="form-control font-weight-bold" id="as_num_oficio"  attrs="{'readonly': [('as_fo_visivility', '=', False)]}" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1079,7 +1079,7 @@
                                             <div class="form-row mt-4 ">
                                                 <div class="form-group col-md-12">
                                                     <label class="form-check-label" for="as_bien_ampliar"></label>
-                                                    <field name="as_bien_ampliar" id='as_bien_ampliar' class="form-control text-info font-weight-bold"  attrs="{'readonly': [('amp_sec', '=', False)]}" />
+                                                    <field name="as_bien_ampliar" id='as_bien_ampliar' class="form-control font-weight-bold"  attrs="{'readonly': [('amp_sec', '=', False)]}" />
                                                 </div>
                                             </div>
             
@@ -1132,7 +1132,7 @@
                                                                             <field name='fin_c_visivility' class="form-check-input" attrs="{'readonly': [('fin_cancel_deuda', '=', False)]}"/>
                                                                         </div>
                                                                         <div class="col-md-6">
-                                                                            <field name="fin_cancelacion" class="form-control text-info font-weight-bold"   attrs="{'readonly': [('fin_c_visivility', '=', False)]}"/>
+                                                                            <field name="fin_cancelacion" class="form-control font-weight-bold"   attrs="{'readonly': [('fin_c_visivility', '=', False)]}"/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1166,7 +1166,7 @@
                                                                             <field name='fin_sd_visivility' class="form-check-input" />
                                                                         </div>
                                                                         <div class="col-md-6">
-                                                                            <field name="fin_solic_desistimiento" class="form-control text-info font-weight-bold" attrs="{'readonly': [('fin_sd_visivility', '=', False)]}" />
+                                                                            <field name="fin_solic_desistimiento" class="form-control font-weight-bold" attrs="{'readonly': [('fin_sd_visivility', '=', False)]}" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1179,7 +1179,7 @@
                                                                             <field name='fin_of_visivility' class="form-check-input" />
                                                                         </div>
                                                                         <div class="col-md-6">
-                                                                            <field name="fin_oficio_desistimiento" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('fin_of_visivility', '=', False)]}" />
+                                                                            <field name="fin_oficio_desistimiento" class="form-control font-weight-bold"  attrs="{'readonly': [('fin_of_visivility', '=', False)]}" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1211,7 +1211,7 @@
                                                                         </div>
             
                                                                         <div class="col-md-6">
-                                                                            <field name="fin_env_emp_fecha" class="form-control text-info font-weight-bold" attrs="{'readonly': [('fin_env_emp_visibility', '=', False)]}"  />
+                                                                            <field name="fin_env_emp_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('fin_env_emp_visibility', '=', False)]}"  />
                                                                         </div>
                                                                     </div>
             
@@ -1254,7 +1254,7 @@
                                                                 </div>
                                                                 <div class="col-md-7">
                                                                     <div class="row">
-                                                                        <field name="fin_rdem_solic" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('fin_rdem_solic_visivility', '=', False)]}" />
+                                                                        <field name="fin_rdem_solic" class="form-control font-weight-bold"  attrs="{'readonly': [('fin_rdem_solic_visivility', '=', False)]}" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1269,7 +1269,7 @@
                                                                     <field name='fin_entrega_desgl_prueb_visivility' class="form-check-input"  attrs="{'readonly': [('fin_retiro_dem', '=', False)]}"  />
                                                                 </div>
                                                                 <div class="col-md-6">                                                       
-                                                                    <field name="fin_entrega_desgl_prueb" class="form-control text-info font-weight-bold"  attrs="{'readonly': [('fin_entrega_desgl_prueb_visivility', '=', False)]}"  />                                                       
+                                                                    <field name="fin_entrega_desgl_prueb" class="form-control font-weight-bold"  attrs="{'readonly': [('fin_entrega_desgl_prueb_visivility', '=', False)]}"  />                                                       
                                                                 </div>
                                                             </div>
                                                         </div>
