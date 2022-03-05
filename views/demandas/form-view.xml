@@ -161,7 +161,7 @@
                                                             <div class='col-md-6' attrs="{'invisible': [('ck_sol_sec','=',False)]}">
                                                                 <div class='row mt-4'>
                                                                     <div class="col-10 col-md-10">
-                                                                        <notebook>
+                                                                        <notebook class='ml-4'>
                                                                             <page string="Historial de Abogados Sustituto">
                                                                                 <field name="id" invisible="1" />
                                                                                 <field name="abogados_sustitutos_ids" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
