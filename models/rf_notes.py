@@ -48,16 +48,16 @@ class Notas(models.Model):
     # ..............................................................................................................................Fecha Registro y tiempo de creacion
     @api.depends('abogado_logger_name')
     def _create_date_compute(self):
-        return fields.Datetime.today() #- timedelta(days=2)
-        # for item in self:
+        # return fields.Datetime.today() #- timedelta(days=2)
+        for item in self:
         # resto 7 dias a la fecha de creacion solo para test
         # item.creacion_fecha = fields.Datetime.today() - timedelta(days=2)
-        # item.creacion_fecha =  fields.Date.today() #  Fecha correcta de creacion de la nota
+            item.creacion_fecha =  fields.Date.today() #  Fecha correcta de creacion de la nota
         # item.creacion_fecha =  self.create_date.date() - timedelta(days=7) #  tomamos la fecha de creacion del campo create_date y restamos 7 dias
         # item.creacion_fecha =  self.create_date.date() #  tomamos la fecha de creacion del campo create_date sin restarle 7 dias.
 
     # creacion_fecha = fields.Datetime() #TODO:
-    creacion_fecha = fields.Datetime(default=_create_date_compute, store=True)  # fecha de creacion
+    creacion_fecha = fields.Datetime(compute=_create_date_compute, store=True)  # fecha de creacion
 
 
     @api.depends('creacion_fecha')
