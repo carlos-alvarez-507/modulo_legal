@@ -137,7 +137,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="row mt-2">
-                                                                    <legend class="col-form-label col-sm-12 pt-0">ADMICION DEMANDA</legend>
+                                                                    <legend class="col-form-label col-sm-12 pt-0">Admisión Demanda</legend>
                                                                     <div class="col-sm-12 d-flex align-items-center justify-content-start">
                                                                         <div class="form-check p-4 d-flex align-items-center justify-content-start">
                                                                             <field class="form-check-input" name="admitida" id="admitida" />
@@ -246,7 +246,7 @@
                                                                     <div class="col-md-3">
                                                                         <label for="sec_fianza_monto">Monto $: </label>
                                                                     </div>
-                                                                    <div class="col-md-9">
+                                                                    <div class="col-md-9 ml-4">
                                                                         <field name="sec_fianza_monto" class="form-control font-weight-bold" id="sec_fianza_monto" />
                                                                     </div>
                                                                 </div>
