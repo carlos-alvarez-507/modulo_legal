@@ -13,7 +13,7 @@
         <xpath expr="." position="inside">
 
 
-            <script type="text/javascript" src="/registros_fiscales/static/src/js/testing.js"></script>
+            <script type="text/javascript" src="/modulo_legal/static/src/js/testing.js"></script>
 
 
             <!-- <link rel="stylesheet" type="text/scss" href="/hr_informes_asistencias/static/src/scss/hr_attendance.scss"/> -->
@@ -246,7 +246,7 @@
                                                                     <div class="col-md-3">
                                                                         <label for="sec_fianza_monto">Monto $: </label>
                                                                     </div>
-                                                                    <div class="col-md-9 ml-4">
+                                                                    <div class="col-md-9">
                                                                         <field name="sec_fianza_monto" class="form-control font-weight-bold" id="sec_fianza_monto" />
                                                                     </div>
                                                                 </div>
@@ -1291,7 +1291,7 @@
                                                                         <form create="true" edit="true" editable="bottom">
                                                                             <field name='notes' attrs="{'readonly': [('state','=','no_editable')]}" />
                                                                             <!-- <field name='creacion_fecha' /> -->
-                                                                            <field name='state' string='ESTADO' decoration-info="state == 'editable'" decoration-bf="state == 'editable'" decoration-primary="state == 'no_editable'" decoration-it="'|', ('state', '=', 'editable'), ('state', '=', 'no_editable')" />
+                                                                            <field name='state' string='ESTADO' decoration-success="state == 'editable'" decoration-primary="state == 'no_editable'"  />
                                                                         </form>
                                                                     </field>
                                                                 </page>

@@ -1,5 +1,5 @@
 {
-    'name': 'Registros Fiscales',
+    'name': 'Legal',
     'summary': """
     Modulo desarrollado para digitalizar los registros fiscales.
     """,

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <odoo>
-    <menuitem name='Registros Fiscales' id='rf_root_menu' web_icon='registros_fiscales,static/description/icon.png'/>    
+    <menuitem name='Legal' id='rf_root_menu' web_icon='modulo_legal,static/description/icon.png'/>    
     <menuitem name='Demanda' id='demandas_menu' parent='rf_root_menu' action='demandas_action' />
     <!-- <menuitem name='Demo - Partner' id='demopartner_menu' parent='rf_root_menu' action='partner_action' /> -->
     <menuitem name='Abogados' id='abogados_menu' parent='rf_root_menu' action='abogados_action' />
