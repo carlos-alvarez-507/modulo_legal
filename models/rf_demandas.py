@@ -51,7 +51,7 @@ class Demandas(models.Model):
             else:
                 item.tcli_desc = ''
                 
-    tcli_desc = fields.Char(compute='_compute_tcli_desc', string='Tipo de Cliente')
+    tcli_desc = fields.Char(compute='_compute_tcli_desc', string='Cliente')
     
 
     # codigo_demanda = fields.Char(default='test')
@@ -59,20 +59,20 @@ class Demandas(models.Model):
     # id
 
     cntacliente = fields.Char(
-        related='cedula.ctacliente', string='Numero de Regitro'
+        related='cedula.ctacliente', string='Regitro'
     )  # La cuenta cliente es lo que aparece como numero de registro, podemos halar esta cuenta de la tabla de clientes.
 
 
 
-    cntaprestamo = fields.Char(string='Cuenta de Prestamo') # trabajar en la relacion de la cuenta prestamo
+    cntaprestamo = fields.Char(string='Cuenta de Prestamo', default=' ') # trabajar en la relacion de la cuenta prestamo
     # cntaprestamo = fields.Char(compute='_get_cnta_prestamo') # Crear esta funcion de llegar a ser necesario
 
 
-    ck_crear = fields.Boolean(string='Mostrar / Crear')
+    ck_crear = fields.Boolean(string='Mostrar')
 
     # ---------------------------------------------------------------COMPUTAR ESTE CAMPO 
     # demanda_nombre = fields.Selection([('demandaa', 'demanda A'), ('demandab', 'demanda B')], 'DEMANDA: ')
-    demanda_nombre = fields.Char(compute='_compute_demanda')
+    demanda_nombre = fields.Char(compute='_compute_demanda', string='Demanda')
 
     # ------------------------------------------------------------------RELACIONAR ESTE CAMPO CON LA TABLA DE SUCURSALES (ACTUALIZR EL LOG DE DEMANDAS PARA QUE APUNTEN AL CODIGO CORECTO ESTABLECIDO POR ROBINSON)
     # sucursal = fields.Selection([('sucursala', 'sucursal A'), ('sucursalb', 'sucursal B')], 'SUCURSAL: ')
@@ -109,6 +109,7 @@ class Demandas(models.Model):
     admitida = fields.Boolean(string='Admitida')
 
     admitida_desc = fields.Text(string='Admitida Descripción')
+    # admitida_desc = fields.Html(string='Admitida Descripción')
 
     no_admitida = fields.Boolean(string='No Admitida')
 

@@ -39,8 +39,8 @@ class Notas(models.Model):
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.cntacliente = demanda_activa.cntacliente
 
-    # cntacliente = fields.Char()  # TODO:
-    cntacliente = fields.Char(compute='_get_cntacliente_from_rfdemanda')
+    cntacliente = fields.Char()  # TODO:
+    # cntacliente = fields.Char(compute='_get_cntacliente_from_rfdemanda')
 
     # ..............................................................................................................................Notes
     notes = fields.Html(string='OBERVACIONES: ')
@@ -69,8 +69,8 @@ class Notas(models.Model):
             else:
                 item.age_of_creation = 0
 
-    # age_of_creation = fields.Integer() #TODO:
-    age_of_creation = fields.Integer(compute=_create_age_of_creation, store=True)  # dias de creacion
+    age_of_creation = fields.Integer() #TODO:
+    # age_of_creation = fields.Integer(compute=_create_age_of_creation, store=True)  # dias de creacion
 
     # ......................................................................................................................Usuario
 
@@ -125,8 +125,8 @@ class Notas(models.Model):
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.tcli = demanda_activa.tcli
 
-    # tcli = fields.Char() #TODO:
-    tcli = fields.Char(compute='_get_tcli')  # TODO: Para import la data, es necesario utilizar el campo como fields.Char() y luego comentarlo y descomentarr la el campo como fields.Char(compute=''). Esto es xq necesitamos tenerlo como compute para poder computar los valores a la hora de crear los records pero como los campos computes no nos permiten importar data entonces necestimos compentarlo y utilizar la opcion no computada a la hora de importar la data.
+    tcli = fields.Char() #TODO:
+    # tcli = fields.Char(compute='_get_tcli')  # TODO: Para import la data, es necesario utilizar el campo como fields.Char() y luego comentarlo y descomentarr la el campo como fields.Char(compute=''). Esto es xq necesitamos tenerlo como compute para poder computar los valores a la hora de crear los records pero como los campos computes no nos permiten importar data entonces necestimos compentarlo y utilizar la opcion no computada a la hora de importar la data.
 
     # .......................................................................................................................... TCLI DESCRIPCION
 
