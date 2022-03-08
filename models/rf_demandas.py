@@ -227,10 +227,10 @@ class Demandas(models.Model):
     adj_total = fields.Float(string='Total $')
 
     adj_finca_fecha_solic_remate = fields.Date(
-        string='Fecha Solicitud Remate')
+        string='Solicitud Remate')
     adj_finca_fs_visivility = fields.Boolean()
     adj_finca_fecha_remate_juzgado = fields.Date(
-        string='Fecha Remate Juzgado')
+        string='Remate Juzgado')
     adj_finca_rj_visivility = fields.Boolean()
     monto_base_remate = fields.Float(string='Monto Base Remate')
 
