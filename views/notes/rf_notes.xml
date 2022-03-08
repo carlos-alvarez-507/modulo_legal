@@ -42,7 +42,7 @@
                 <field name='creacion_fecha' string='Fecha de Creación'/>
                 <field name='abogado_logger_name' string='Usuario'/>
                 <field name='notes' string='Observación'  decoration-bf="'|', ('state', '=', 'editable'), ('state', '=', 'no_editable')"/>
-                <field name='state' string='Estado' decoration-info="state == 'editable'" decoration-bf="state == 'editable'" decoration-primary="state == 'no_editable'"/>
+                <field name='state' string='Estado' decoration-info="state == 'editable'" decoration-bf="state == 'editable'" decoration-warning="state == 'no_editable'"/>
                 <!-- <field name='age_of_creation' /> -->
                 <!-- <field name='abogado_logger_name' /> -->
                 <!-- <field name='cntaprestamo' /> -->

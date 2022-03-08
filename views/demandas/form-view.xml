@@ -1550,7 +1550,7 @@
                                                                     <form create="true" edit="true" editable="bottom">
                                                                         <field name='notes' attrs="{'readonly': [('state','=','no_editable')]}" />
                                                                         <!-- <field name='creacion_fecha' /> -->
-                                                                        <field name='state' string='ESTADO' decoration-success="state == 'editable'" decoration-primary="state == 'no_editable'" />
+                                                                        <field name='state' string='ESTADO'/>
                                                                     </form>
                                                                 </field>
                                                             </page>
