@@ -234,7 +234,7 @@ class Demandas(models.Model):
     adj_finca_rj_visivility = fields.Boolean()
     monto_base_remate = fields.Float(string='Monto Base Remate')
 
-    # .................................................................................................................................... Ampliaciones
+    # .................................................................................................................................... Ampliaciones 
 
     amp_emb = fields.Boolean(string='Ampliación de Embargo', )
     ae_retiro = fields.Date(string='Fecha Retiro')
