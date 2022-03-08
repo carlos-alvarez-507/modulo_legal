@@ -56,8 +56,8 @@ class Notas(models.Model):
         # item.creacion_fecha =  self.create_date.date() - timedelta(days=7) #  tomamos la fecha de creacion del campo create_date y restamos 7 dias
         # item.creacion_fecha =  self.create_date.date() #  tomamos la fecha de creacion del campo create_date sin restarle 7 dias.
 
-    # creacion_fecha = fields.Datetime() #TODO:
-    creacion_fecha = fields.Datetime(compute=_create_date_compute, store=True)  # fecha de creacion
+    creacion_fecha = fields.Datetime() #TODO:
+    # creacion_fecha = fields.Datetime(compute=_create_date_compute, store=True)  # fecha de creacion
 
 
     @api.depends('creacion_fecha')
