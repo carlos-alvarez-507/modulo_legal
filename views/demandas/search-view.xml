@@ -23,7 +23,7 @@
                 <!-- Filtro Rápido -->
                 <!-- <filter name='categoria_idioma' string='Categoria Idioma' domain="[('categoria_id','=','Idioma')]" />                 -->
 
-                <!-- <filter name='sec_fianza' string='FIANZA - SI' domain="[('sec_fianza','=',True)]" /> -->
+                <filter name='sec_fianza' string='Fianza' domain="[('sec_fianza','=',True)]" />
                 <!-- <filter name='sec_fianza' string='FIANZA - NO' domain="[('sec_fianza','=',False)]" /> -->
                 <!-- <filter name='bienes' string='BIENES - SI' domain="[('bienes','=',True)]" /> -->
                 <!-- <filter name='bienes' string='BIENES - NO' domain="[('bienes','=',False)]" /> -->
