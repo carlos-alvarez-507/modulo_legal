@@ -4,14 +4,14 @@
     <menuitem name='Legal' id='rf_root_menu' web_icon='modulo_legal,static/description/icon.png'/> 
     <menuitem name='Demanda' id='demandas_menu' parent='rf_root_menu' action='demandas_action' />
     <menuitem name='Configuración' id='demandas_configuracion' parent='demandas_menu'>
-        <menuitem name='Abogados' id='abogados_menu' parent='rf_root_menu' action='abogados_action' />
-        <menuitem name='Juzgados' id='juzgados_menu' parent='rf_root_menu' action='juzgados_action' />
-        <menuitem name='Bienes Embargables' id='rf_bienembargable_menu' parent='rf_root_menu' action='bienembargable_action' />    
-        <!-- <menuitem name='Corregimientos' id='rf_corregimientos_menu' parent='rf_root_menu' action='corregimientos_action' />     -->
-        <!-- <menuitem name='Distritos' id='rf_distritos_menu' parent='rf_root_menu' action='distritos_action' />     -->
-        <menuitem name='Provincias' id='rf_provincias_menu' parent='rf_root_menu' action='provincias_action' />    
-        <menuitem name='Demo Clientes' id='rf_democlientes_menu' parent='rf_root_menu' action='democlientes_action' />    
-        <menuitem name='Historial de Abogados Sustitutos' id='rf_abosust_menu' parent='rf_root_menu' action='abosust_action' />    
-        <menuitem name='Notas' id='rf_notas_menu' parent='rf_root_menu' action='notas_action' />    
+        <menuitem name='Abogados' id='abogados_menu'  action='abogados_action' />
+        <menuitem name='Juzgados' id='juzgados_menu'  action='juzgados_action' />
+        <menuitem name='Bienes Embargables' id='rf_bienembargable_menu'  action='bienembargable_action' />    
+        <!-- <menuitem name='Corregimientos' id='rf_corregimientos_menu'  action='corregimientos_action' />     -->
+        <!-- <menuitem name='Distritos' id='rf_distritos_menu'  action='distritos_action' />     -->
+        <menuitem name='Provincias' id='rf_provincias_menu'  action='provincias_action' />    
+        <menuitem name='Demo Clientes' id='rf_democlientes_menu'  action='democlientes_action' />    
+        <menuitem name='Historial de Abogados Sustitutos' id='rf_abosust_menu'  action='abosust_action' />    
+        <menuitem name='Notas' id='rf_notas_menu'  action='notas_action' />    
     </menuitem>
 </odoo>
