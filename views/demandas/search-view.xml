@@ -54,13 +54,13 @@
             </search>
 
             <!-- search panel -->
-            <!-- <searchpanel>
+            <searchpanel>
                 <field name='sucursal' string='Empresas' icon='fa-user' />
                 <field name='juzgado' string='Juzgados' icon='fa-user' />
                 <field name='provincia' string='Provincias' icon='fa-user' />
-                <field name='abogado' string='Abogado' icon='fa-user' />            
+                <field name='abogado' string='Abogado' icon='fa-user' />           
 
-            </searchpanel> -->
+            </searchpanel>
         </field>
     </record>
 </odoo>
