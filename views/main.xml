@@ -3,7 +3,7 @@
 <odoo>
     <menuitem name='Legal' id='rf_root_menu' web_icon='modulo_legal,static/description/icon.png'/> 
     <menuitem name='Demanda' id='demandas_menu' parent='rf_root_menu' action='demandas_action' />
-    <menuitem name='Configuración' id='demandas_configuracion' parent='demandas_menu'>
+    <menuitem name='Configuración' id='demandas_configuracion' parent='rf_root_menu'>
         <menuitem name='Abogados' id='abogados_menu'  action='abogados_action' />
         <menuitem name='Juzgados' id='juzgados_menu'  action='juzgados_action' />
         <menuitem name='Bienes Embargables' id='rf_bienembargable_menu'  action='bienembargable_action' />    
