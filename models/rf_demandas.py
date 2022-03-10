@@ -11,7 +11,42 @@ class Demandas(models.Model):
     _description = 'Demandas'
     _rec_name = 'id'
 
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
     # _order = 'fecha_demanda desc'
+
+    state = fields.Selection([('status_1','Por admisión de demanda'),
+                            ('status_2','Por monto de fianza'),
+                            ('status_3','Por consignación de fianza'),
+                            ('status_4','Por oficio de secuestro'),
+                            ('status_5','Por solicitar ampliación de secuestro'),
+                            ('status_6','Por salir oficio de ampliación de secuestro'),
+                            ('status_7','Por corrección` oficio de secuestro'),
+                            ('status_8','Por notificación cliente'),
+                            ('status_9','Por envío notificación por ccj'),
+                            ('status_10','Por respuesta de ccj'),
+                            ('status_11','Por envío de boleta con la policia'),
+                            ('status_12','Por respuesta de la policia'),
+                            ('status_13','Por envío comisión a otro juzgado'),
+                            ('status_14','Por respuesta de comisión enviada'),
+                            ('status_15','Por solicitar emplazamiento por edicto'),
+                            ('status_16','Por aprobar en juzg. Emplazamiento por edicto'),
+                            ('status_17','Por oficio de embargo'),
+                            ('status_18','Por corrección oficio de embargo'),
+                            ('status_19','Por oficio de entrega de sumas retenidas'),
+                            ('status_20','Por solicitar ampliación de embargo'),
+                            ('status_21','Por salir oficio de ampliación de embargo'),
+                            ('status_22','Por devolución de fianza'),
+                            ('status_23','Por corrección devolución de fianza'),
+                            ('status_24','Por oficio de embargo y devolución de fianza'),
+                            ('status_25','Por solicitud remate finca'),
+                            ('status_26','Por realizar avalúo finca'),
+                            ('status_27','Por dar fecha de remate finca'),
+                            ('status_28','Por solicitar desistimiento'),
+                            ('status_29','Por salir desistimiento'),
+                            ('status_30','Por resolver recurso apelación'),
+                            ('status_31','Por resolver excepción')]
+                            , tracking=True)
 
     # .................................................................................................................................... demandas
 

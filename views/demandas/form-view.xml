@@ -30,6 +30,22 @@
                 <field name='cedula'/>
             </form> -->
 
+            <div class="container-fluid">
+                <div style="width: 80%; margin:0 auto;">
+                    <header>
+                        <!-- <button name='boton_borrador' string='Borrador' type='object' />
+                    <button name='boton_publicar' string='Publicar' type='object' states='borrador' class='oe_highlight'/> 
+                    <button name='boton_vender' string='Vender' type='object' states='publicado' class='oe_highlight'/>  -->
+
+                        <field name='state' widget='statusbar' options="{'clickable': 1}" />
+
+                        <!-- <field name='state' widget='statusbar' options="{'clickable':   1}" /> -->
+                        <!-- <field name='state' widget='statusbar' options="{'clickable': 0}" /> -->
+                    </header>
+                </div>
+            </div>
+
+
             <form>
                 <div class='container-fluid'>
                     <!-- <div class="container"> -->
@@ -1448,7 +1464,7 @@
                                                                         <div class="form-check col-md-5 d-flex align-items-center justify-content-left">
                                                                             <!-- <label class="form-check-label" for="fin_oficio_desistimiento"></label> -->
                                                                             <field name='fin_env_emp' class="form-check-input" />
-                                                                            <label class="form-check-label" for="fin_env_emp_fecha"></label>                                                                            
+                                                                            <label class="form-check-label" for="fin_env_emp_fecha"></label>
                                                                         </div>
                                                                         <div class="col-md-7" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
                                                                             <div class="row">
@@ -1458,7 +1474,7 @@
                                                                                 <div class="col-md-10">
                                                                                     <field name="fin_env_emp_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('fin_env_emp_visibility', '=', False)]}" />
                                                                                 </div>
-                                                                            </div>                                                                        
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1550,7 +1566,7 @@
                                                                     <form create="true" edit="true" editable="bottom">
                                                                         <field name='notes' attrs="{'readonly': [('state','=','no_editable')]}" />
                                                                         <!-- <field name='creacion_fecha' /> -->
-                                                                        <field name='state' string='ESTADO'/>
+                                                                        <field name='state' string='ESTADO' />
                                                                     </form>
                                                                 </field>
                                                             </page>
@@ -1576,7 +1592,20 @@
                     </div>
                     <!-- </div> -->
                 </div>
+                <div class="row">
+                    <div class='oe_chatter'>
+                        <!-- <field name='message_follower_ids' />
+                        <field name='activity_ids' />
+                        <field name='message_ids' /> -->
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers" />
+                            <field name="activity_ids" widget="mail_activity" />
+                            <field name="message_ids" widget="mail_thread" />
+                        </div>
+                    </div>
+                </div>
             </form>
+
 
         </field>
     </record>

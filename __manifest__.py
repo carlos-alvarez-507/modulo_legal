@@ -6,7 +6,7 @@
     'author': 'Grupo Saleta',
     'category': 'General',
     'version': '1.0.0',
-    'depends': ['base'],
+    'depends': ['base','mail'],
     'data': [
         'security/rf_security.xml',
         'security/ir.model.access.csv',
@@ -24,6 +24,7 @@
         'views/corregimientos/rf_corregimientos.xml',
         'views/distritos/rf_distritos.xml',
         'views/provincias/rf_provincias.xml',
+        'views/estados/rf_estados.xml',
         'views/demo_clientes/demo_clientes.xml',
         'views/main.xml',
     ],

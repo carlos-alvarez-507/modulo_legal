@@ -41,6 +41,12 @@ ac_rf_provincias,ac_rf_provincias,model_rf_provincias,base.group_user,1,1,1,1
 ac_rf_provincias,ac_rf_provincias,model_rf_provincias,grupo_registros_fiscales,1,1,1,1
 
 
+ac_rf_estados,ac_rf_estados,model_rf_estados,,1,0,0,0
+ac_rf_estados,ac_rf_estados,model_rf_estados,base.group_user,1,1,1,1
+ac_rf_estados,ac_rf_estados,model_rf_estados,grupo_registros_fiscales,1,1,1,1
+
+
+
 ac_demo_clientes,ac_demo_clientes,model_demo_clientes,,1,0,0,0
 ac_demo_clientes,ac_demo_clientes,model_demo_clientes,base.group_user,1,1,1,1
 ac_demo_clientes,ac_demo_clientes,model_demo_clientes,grupo_registros_fiscales,1,1,1,1

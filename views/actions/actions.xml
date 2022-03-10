@@ -32,14 +32,13 @@
     </record>
 
 
-    
     <!-- Historial de abogados -->
     <record id='abosust_action' model='ir.actions.act_window'>
         <field name='name'>Historial</field>
         <field name='res_model'>rf.abosust</field>
         <field name='view_mode'>tree,form</field>
     </record>
-       
+
     <!-- Bien Embargable -->
     <record id='bienembargable_action' model='ir.actions.act_window'>
         <field name='name'>Bien Embargable</field>
@@ -69,11 +68,19 @@
         <field name='view_mode'>tree,form</field>
     </record>
 
-     <!-- Demo Cliente  -->
+    <!-- Demo Cliente  -->
     <record id='democlientes_action' model='ir.actions.act_window'>
         <field name='name'>Demo Client</field>
         <field name='res_model'>demo.clientes</field>
         <field name='view_mode'>tree,form</field>
     </record>
-    
+
+
+    <!-- Estados  -->
+    <record id='estados_action' model='ir.actions.act_window'>
+        <field name='name'>Estados</field>
+        <field name='res_model'>rf.estados</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
 </odoo>

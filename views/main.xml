@@ -13,5 +13,6 @@
         <menuitem name='Demo Clientes' id='rf_democlientes_menu'  action='democlientes_action' />    
         <menuitem name='Historial de Abogados Sustitutos' id='rf_abosust_menu'  action='abosust_action' />    
         <menuitem name='Notas' id='rf_notas_menu'  action='notas_action' />    
+        <menuitem name='Estados' id='rf_estados_menu'  action='estados_action' />    
     </menuitem>
 </odoo>
