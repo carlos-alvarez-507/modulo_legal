@@ -45,7 +45,12 @@ class Demandas(models.Model):
                             ('status_28','Por solicitar desistimiento'),
                             ('status_29','Por salir desistimiento'),
                             ('status_30','Por resolver recurso apelación'),
-                            ('status_31','Por resolver excepción')]
+                            ('status_31','Por resolver excepción'),
+                            ('status_32','Salió embargo y está pendiente devolución fianza'),
+                            ('status_33','Salió embargo'),
+                            ('status_34','Embargo reflejado en ct y se efectúa dto'),
+                            ('status_35','Embargo pendiente')                       
+                            ]
                             , tracking=True)
 
     # .................................................................................................................................... demandas
