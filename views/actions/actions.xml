@@ -75,12 +75,4 @@
         <field name='view_mode'>tree,form</field>
     </record>
 
-
-    <!-- Estados  -->
-    <record id='estados_action' model='ir.actions.act_window'>
-        <field name='name'>Estados</field>
-        <field name='res_model'>rf.estados</field>
-        <field name='view_mode'>tree,form</field>
-    </record>
-
 </odoo>
