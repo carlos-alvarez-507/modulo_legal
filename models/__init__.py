@@ -7,6 +7,5 @@ from . import rf_bienembargable
 from . import rf_corregimientos
 from . import rf_distritos
 from . import rf_provincias
-from . import rf_estados
 from . import demo_cliente
 from . import other_class
