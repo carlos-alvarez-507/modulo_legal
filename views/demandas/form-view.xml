@@ -1594,14 +1594,14 @@
                 </div>
                 <div class="row">
                     <div class='oe_chatter'>
-                        <!-- <field name='message_follower_ids' />
+                        <field name='message_follower_ids' />
                         <field name='activity_ids' />
-                        <field name='message_ids' /> -->
-                        <div class="oe_chatter">
+                        <field name='message_ids' />
+                        <!-- <div class="oe_chatter">
                             <field name="message_follower_ids" widget="mail_followers" />
                             <field name="activity_ids" widget="mail_activity" />
                             <field name="message_ids" widget="mail_thread" />
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </form>
