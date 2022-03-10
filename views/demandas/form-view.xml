@@ -30,9 +30,13 @@
                 <field name='cedula'/>
             </form> -->
 
-            <!-- <header>
-                <field name='state' widget='statusbar' />
-            </header> -->
+            <div class="container-fluid">
+                <div style="width: 80%; margin:0 auto;">
+                    <header>                
+                        <field name='state' widget='statusbar' options="{'clickable': 1}" />
+                    </header>
+                </div>
+            </div>
 
 
             <form>
