@@ -30,13 +30,13 @@
                 <field name='cedula'/>
             </form> -->
 
-            <!-- <div class="container-fluid">
+            <div class="container-fluid">
                 <div style="width: 80%; margin:0 auto;">
                     <header>                
                         <field name='state' widget='statusbar' options="{'clickable': 1}" />
                     </header>
                 </div>
-            </div> -->
+            </div>
 
 
             <form>
@@ -1585,13 +1585,13 @@
                     </div>
                     <!-- </div> -->
                 </div>
-                <!-- <div class="row">
+                <div class="row">
                      <div class="oe_chatter">
                             <field name="message_follower_ids" widget="mail_followers" />
                             <field name="activity_ids" widget="mail_activity" />
                             <field name="message_ids" widget="mail_thread" />
                         </div>
-                </div> -->
+                </div>
             </form>
 
 

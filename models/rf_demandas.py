@@ -11,7 +11,7 @@ class Demandas(models.Model):
     _description = 'Demandas'
     _rec_name = 'id'
 
-    # _inherit = ['mail.thread', 'mail.activity.mixin']
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     # _order = 'fecha_demanda desc'
 
