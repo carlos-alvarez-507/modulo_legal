@@ -31,6 +31,7 @@
                 <field name='juzgado' string='Juzgado' />
                 <field name='abogado' string='Abogado' />
                 <field name='provincia' string='Provincia' />
+                <field name='id' string='Demanda ID'/>
 
 
                 <!-- Filtro Rápido -->
