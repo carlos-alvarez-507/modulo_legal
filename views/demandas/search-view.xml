@@ -22,8 +22,7 @@
         <field name='arch' type='xml'>
             <search>
                 <!-- Busqueda Rápida -->
-                <field name='sucursal' string='Cia' />
-                <field name='codigo_demanda' string='ID' />
+                <field name='sucursal' string='Cia' />                
                 <field name='cedula' string='Cédula' />
                 <field name='cliente_nombre' string='Cliente' />
                 <field name='fecha_reg' string='Fecha Demanda' />
