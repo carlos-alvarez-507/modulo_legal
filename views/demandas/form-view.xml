@@ -327,9 +327,9 @@
                                                                         <field name="id" invisible="1" />
                                                                         <field name="abogados_sustitutos_ids" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
                                                                             <form create="true" edit="true" editable="bottom">
-                                                                                <field name='desde' />
-                                                                                <field name='hasta' />
-                                                                                <field name='abogado_descripcion' />
+                                                                                <field name='desde' string='Desde: '/>
+                                                                                <field name='hasta' string='Hasta: '/>
+                                                                                <field name='abogado_descripcion' string='Abogado: '/>
                                                                             </form>
                                                                         </field>
                                                                     </page>
