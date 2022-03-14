@@ -18,11 +18,11 @@ class AbogadosSustitutos(models.Model):
 
 
 
-    abogado_descripcion = fields.Many2one('rf.abogados')
+    abogado_descripcion = fields.Many2one('rf.abogados', string='Abogado: ')
 
-    desde = fields.Date('DESDE: ')
+    desde = fields.Date(string='DESDE: ')
 
-    hasta = fields.Date('HASTA: ')
+    hasta = fields.Date(string='HASTA: ')
 
 
     renglon = fields.Integer()
