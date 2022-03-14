@@ -327,9 +327,20 @@
                                                                         <field name="id" invisible="1" />
                                                                         <field name="abogados_sustitutos_ids" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
                                                                             <form create="true" edit="true" editable="bottom">
-                                                                                <field name='desde' string='Desde: '/>
-                                                                                <field name='hasta' string='Hasta: '/>
-                                                                                <field name='abogado_descripcion' string='Abogado: '/>
+                                                                                <div class="container-fluid">
+                                                                                    <div class="row">
+                                                                                        <label for='desde'></label>
+                                                                                        <field name='desde' id='desde' string='Desde: ' />
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <label for='hasta'></label>
+                                                                                        <field name='hasta' id='hasta' string='Hasta: ' />
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <label for='abogado_descripcion'></label>
+                                                                                        <field name='abogado_descripcion' id='abogado_descripcion' string='Abogado: ' />
+                                                                                    </div>
+                                                                                </div>
                                                                             </form>
                                                                         </field>
                                                                     </page>
