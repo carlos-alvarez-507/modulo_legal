@@ -75,4 +75,11 @@
         <field name='view_mode'>tree,form</field>
     </record>
 
+    <!-- Galeria -->
+    <record id='galeria_action' model='ir.actions.act_window'>
+        <field name='name'>Galeria</field>
+        <field name='res_model'>rf.galeria</field>
+        <field name='view_mode'>kanban,form</field>
+    </record>
+
 </odoo>

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
+
+    <template id="assets_backend_report2" name="hr_attendance informes" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+
+
+            <!-- <script type="text/javascript" src="/modulo_legal/static/src/js/testing.js"></script> -->
+
+
+            <link rel="stylesheet" type="text/scss" href="/modulo_legal/static/src/scss/test.scss"/>
+
+        </xpath>
+    </template>
+
+
     <!-- Vista Search -->
     <record id='demandas_search_view' model='ir.ui.view'>
         <field name='name'>rf.demandas.search.view</field>
@@ -47,12 +61,15 @@
 
 
                 <!-- search panel -->
-                <searchpanel>
-                    <field name='sucursal' string='Empresas' icon='fa-user' />
-                    <field name='provincia' string='Provincias' icon='fa-user' />
-                    <field name='abogado' string='Abogados' icon='fa-user' />
-                    <field name='juzgado' string='Juzgados' icon='fa-user' />
+                <!-- <xpath expr='//search' position='inside'> -->
+                <searchpanel class='rf_root'>
+                    <!-- <searchpanel class='account_root'> -->
+                    <field name='sucursal' string='Empresas' icon='fa-user' select="multi" enable_counters="1" class='text-wrap !important'/>
+                    <field name='provincia' string='Provincias' icon='fa-us er' select="multi" enable_counters="1" class='text-wrap !important'/>
+                    <field name='abogado' string='Abogados' icon='fa-user' select="multi" enable_counters="1" class='text-wrap !important'/>
+                    <field name='juzgado' string='Juzgados' icon='fa-user' select="multi" enable_counters="1" class='text-wrap !important'/>
                 </searchpanel>
+                <!-- </xpath> -->
 
             </search>
 

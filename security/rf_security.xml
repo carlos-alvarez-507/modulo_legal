@@ -1,17 +1,44 @@
 <?xml version='1.0' encoding="UTF-8"?>
 
 <odoo>
+
     <!-- Categoria para Registros Fiscales -->
     <record id='cat_registros_fiscales' model='ir.module.category'>
         <field name='name'>Registros Fiscales</field>
     </record>
 
 
-    <!-- Grupo de usuarios para los registros fiscales -->
-    <record id='grupo_registros_fiscales' model='res.groups'>
-        <field name='name'>Usuarios</field>
+    <!-- Admin: read, modify, create, delete  -->
+    <record id='grupo_registros_fiscales_admin' model='res.groups'>
+        <field name='name'>Usuario Admin</field>
         <field name='category_id' ref='cat_registros_fiscales' />
-        <field name='implied_ids' eval="[(4, ref('base.group_user'))]" />
+        <!-- <field name='implied_ids' eval="[(4, ref('base.group_user'))]" /> -->
         <field name="users" eval="[(4, ref('base.user_admin'))]" />
     </record>
+
+    <!-- Admin: read, modify, create  -->
+    <record id='grupo_registros_fiscales' model='res.groups'>
+        <field name='name'>Usuarios_rmc</field>
+        <field name='category_id' ref='cat_registros_fiscales' />
+        <!-- <field name='implied_ids' eval="[(4, ref('base.group_user'))]" /> -->
+        <!-- <field name="users" eval="[(4, ref('base.user_admin'))]" /> -->
+    </record>
+
+    <!-- Admin: read, modify,  -->
+    <record id='grupo_rf_read_modify' model='res.groups'>
+        <field name='name'>Usuarios_rm</field>
+        <field name='category_id' ref='cat_registros_fiscales' />
+        <!-- <field name="users" eval="[(4, ref('base.user_admin'))]" /> -->
+    </record>
+
+
+    <!-- Admin: read, -->
+    <record id='grupo_rf_read' model='res.groups'>
+        <field name='name'>Usuarios_r</field>
+        <field name='category_id' ref='cat_registros_fiscales' />
+        <!-- <field name='implied_ids' eval="[(4, ref('base.group_user'))]" /> -->
+        <!-- <field name="users" eval="[(4, ref('base.user_admin'))]" /> -->
+    </record>
+
+
 </odoo>

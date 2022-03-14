@@ -25,6 +25,7 @@
         'views/distritos/rf_distritos.xml',
         'views/provincias/rf_provincias.xml',
         'views/demo_clientes/demo_clientes.xml',
+        'views/galeria/rf_galeria.xml',
         'views/main.xml',
     ],
     'installable': True,

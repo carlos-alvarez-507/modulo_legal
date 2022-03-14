@@ -30,16 +30,65 @@
                 <field name='cedula'/>
             </form> -->
 
-            <div class="container-fluid">
-                <div style="width: 80%; margin:0 auto;">
-                    <header>                
-                        <field name='state' widget='statusbar' options="{'clickable': 1}" />
-                    </header>
-                </div>
-            </div>
-
-
             <form>
+
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <header>
+                                <!-- <div class='px-4 bg-primary'>
+                                </div> -->
+                                <!-- <div class='px-4 bg-primary'>
+                                </div> -->
+
+                                <!-- <button name='myfn' string='' type='object' class='btn-info' /> -->
+                                <!-- eval="[(4,ref('grupo_registros_fiscales_admin'))]" -->
+                                <field name='estado' widget='statusbar' options="{'clickable': 1}" class='d-flex mr-4 justify-content-evenly' decoration-danger="estado=='estado_embargo'" decoration-info="estado=='estado_proceso'" />
+
+                                <!-- <field name='header_vibility' id='header_vibility' string='Mostrar/Ocultar Estados' attrs="{'invisible': ['|', ('header_vibility','=',False), ('header_vibility','=',True)]}" /> -->
+
+
+                            </header>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-md-12">
+
+                            <header>
+                                <!-- <div class='px-4 bg-primary'>
+                                </div> -->
+                                <!-- <div class='px-4 bg-primary'>
+                                </div> -->
+
+                                <button name='myfn' string='Estado' type='object' class='btn-info' />
+
+                                <field name='state' widget='statusbar' options="{'clickable': 1}" class='d-flex mr-4 justify-content-evenly' attrs="{'invisible': [('header_vibility','=',False)]}" />
+
+                                <field name='header_vibility' id='header_vibility' string='Mostrar/Ocultar Estados' attrs="{'invisible': ['|', ('header_vibility','=',False), ('header_vibility','=',True)]}" />
+
+
+                            </header>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
                 <div class='container-fluid'>
                     <!-- <div class="container"> -->
                     <div class='row'>
@@ -79,8 +128,6 @@
                                                                 <field name="tcli_desc" id='tcli_desc' class='form-control font-weight-bold' />
                                                             </div>
                                                         </div>
-
-
                                                     </div>
                                                     <div class="form-group col-md-3">
                                                         <div class="row px-4">
@@ -1580,21 +1627,67 @@
                                         <!-- </div> -->
                                     </div>
                                 </page>
+                                <!-- <page string='Galeria'>
+                                    <div class="container-fluid text-black ">
+                         
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <notebook>
+                                                            <page>
+                                                                <field name="id" invisible="1" />
+                                                                <field name="galeria_id" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
+                                                                    <kanban>
+
+                                                                      
+
+                                                                        <templates>
+                                                                            <t t-name='kanban-box'>
+                                                                                <div class='oe_kanban_global_click'>
+                                                                                    <div class='o_kanban_image'>
+                                                                                        <img t-att-src="kanban_image('rf.demandas','galeria_imagen',record.id.raw_value)" alt='Image' />
+                                                                        
+
+                                                                                    </div>
+                                                                                    <div class='oe_kanban_details'>
+                                                                                        <div class='o_kanban_record_top'>
+                                                                                            <div class='o_kanban_record_heading'>
+                                                                                                <strong class='o_kanban_record_title oe_partner_heading'>
+                                                                                                    <field name='desc' />
+                                                                                                </strong>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </t>
+                                                                        </templates>
+
+
+                                                                    </kanban>
+                                                                </field>
+                                                            </page>
+                                                        </notebook>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                </page> -->
                             </notebook>
                         </div>
                     </div>
                     <!-- </div> -->
                 </div>
                 <div class="row">
-                     <div class="oe_chatter">
-                            <field name="message_follower_ids" widget="mail_followers" />
-                            <field name="activity_ids" widget="mail_activity" />
-                            <field name="message_ids" widget="mail_thread" />
-                        </div>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
                 </div>
             </form>
-
-
         </field>
     </record>
 </odoo>

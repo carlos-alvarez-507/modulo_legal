@@ -9,7 +9,8 @@
             <tree string='Demandas'>
                 <field name='codigo_demanda' string='Código Demanda'/>
                 <field name='state' 
-                    widget='badge'                    
+                    widget='badge'  
+                    decoration-muted="state=='status_0'"
                     decoration-danger="state=='status_1' or state=='status_2' or state=='status_3' or state=='status_4' or state=='status_5' or state=='status_6' or state=='status_7'"                      
                     decoration-warning="state=='status_8' or state=='status_9' or state=='status_10' or state=='status_11' or state=='status_12' or state=='status_13'"  
                     decoration-primary="state=='status_14' or state=='status_15' or state=='status_16' or state=='status_17' or state=='status_18' or state=='status_19'"  
@@ -24,10 +25,18 @@
                 <field name='cedula' string='Cédula' />
                 <field name='cliente_nombre' string='Cliente'/>
                 <field name='fecha_reg' string='Fecha de Demanda'/>
-                <field name='monto_demanda' string='Monto' />
+                <field name='monto_demanda' string='Monto Demanda' />
+                <field name='sec_fianza_monto' string='Monto Fianza' />
+                <field name='sec_costa' string='Monto Fianza Costas' />
                 <field name='juzgado' string='Juzgado'/>
                 <field name='abogado' string='Abogado' />
                 <field name='provincia' string='Provincia'/>
+                <field name='estado' 
+                       widget='badge'     
+                       string='Estado'
+                       decoration-danger="estado=='estado_embargo'"                      
+                       decoration-info="estado=='estado_proceso'"                      
+                />
             </tree>
         </field>
     </record>
