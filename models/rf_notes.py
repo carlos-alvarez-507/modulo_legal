@@ -4,9 +4,6 @@ from odoo import models, fields, api
 from datetime import datetime, date, timedelta
 
 import dateutil.parser
-# b = "2015-10-28 16:09:59"
-# d = dateutil.parser.parse(b).date()
-
 
 class Notas(models.Model):
 
@@ -16,16 +13,12 @@ class Notas(models.Model):
 
     _order = 'creacion_fecha desc'
 
-    # libro_fecha = fields.Date(default=fields.Date.today, string='FECHA: ')
-
     # ..............................................................................................................................Demanda ID
     def _get_demanda_id_from_context(self):
         parent_id = self.env.context.get('parent_id')
         parent_model = self.env.context.get('parent_model')
 
         if parent_id and parent_model:
-            # parent_obj = self.env[parent_model].browse(parent_id)
-            # now you have the parent obj to do what you want
             default_value = parent_id  # ... use the parent
             return default_value
         return None
@@ -39,7 +32,7 @@ class Notas(models.Model):
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.cntacliente = demanda_activa.cntacliente
 
-    cntacliente = fields.Char()  # TODO:
+    cntacliente = fields.Char()  # TODO: Utilizamos este campo para importar los archivos solamente. Luego de importar los archivos entonces comentamos este campo y descomentamos el campo que es computado.
     # cntacliente = fields.Char(compute='_get_cntacliente_from_rfdemanda')
 
     # ..............................................................................................................................Notes
@@ -48,18 +41,15 @@ class Notas(models.Model):
     # ..............................................................................................................................Fecha Registro y tiempo de creacion
     @api.depends('abogado_logger_name')
     def _create_date_compute(self):
-        # return fields.Datetime.today() #- timedelta(days=2)
         for item in self:
-        # resto 7 dias a la fecha de creacion solo para test
-        # item.creacion_fecha = fields.Datetime.today() - timedelta(days=2)
-            item.creacion_fecha =  fields.Date.today() #  Fecha correcta de creacion de la nota
-        # item.creacion_fecha =  self.create_date.date() - timedelta(days=7) #  tomamos la fecha de creacion del campo create_date y restamos 7 dias
-        # item.creacion_fecha =  self.create_date.date() #  tomamos la fecha de creacion del campo create_date sin restarle 7 dias.
+            item.creacion_fecha =  fields.Date.today()
 
-    creacion_fecha = fields.Datetime() #TODO:
+    creacion_fecha = fields.Datetime() #TODO: Utilizamos este campo para importar los archivos solamente.. Luego de imporat los archivos entonces comentamos este campo y descomentamos el campo que es computado.
     # creacion_fecha = fields.Datetime(compute=_create_date_compute, store=True)  # fecha de creacion
 
 
+
+    # ..............................................................................................................................Tiempo de creacion de la nota
     @api.depends('creacion_fecha')
     def _create_age_of_creation(self):
         for item in self:
@@ -69,41 +59,35 @@ class Notas(models.Model):
             else:
                 item.age_of_creation = 0
 
-    age_of_creation = fields.Integer() #TODO:
+    age_of_creation = fields.Integer() #TODO: utilizamos este campo para importar los archivos solamente. Luego de importar los archivos entonces comentamos este campo y descomentamos el campo que es computado.
     # age_of_creation = fields.Integer(compute=_create_age_of_creation, store=True)  # dias de creacion
 
     # ......................................................................................................................Usuario
-
     def _get_user_name(self):
         return self.env.user.name
 
     def _get_user_id(self):
         return self.env.user.id
 
-    # abogado_logger_name = fields.Char() #TODO:
     abogado_logger_name = fields.Char(default=_get_user_name)
-
-    # abogado_logger_uid = fields.Char() #TODO:
+    
     abogado_logger_uid = fields.Char(default=_get_user_id)
 
-    # ..........................................................................................................................Cuenta del prestamo
-    # cntaprestamo = fields.Char()
-
+    # ..........................................................................................................................Cuenta del prestamo    
     def _get_cntaprestamo_from_rfdemanda(self):
         demandas_model = self.env['rf.demandas']
         parent_id = self.env.context.get('parent_id')
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.cntacliente = demanda_activa.cntaprestamo
-
-    # TODO: Este campo debe ser computado tomando la cuenta prestamos directamente de la columna de cntaprestamo de la tabla de rf_demandas.
-    cntaprestamo = fields.Char()
+   
+    cntaprestamo = fields.Char() #TODO: La cuenta normalmente es ingresada por el usuario desde la UI. Pero tambien podemos computarla halando de la tabla de prestamos (Esto puede ser implementado a futuro).
     # cntaprestamo = fields.Char(compute='_get_cntaprestamo_from_rfdemanda')
 
     # .......................................................................................................................... Code Tab
     codtab = fields.Char()
 
-    # .......................................................................................................................... State -> Update de status of the notes so that it can be editable or not by users.
-    # TODO: Recordar confirmar el tiempo exacto en el cual las notas pasan a ser no editables para actualiarlo en esta condicion
+    # .......................................................................................................................... State: este campo depende de la cantidad de dias de la creacion de la nota. Indica si el campo puede ser editable o no. 
+    # TODO: state indicara el valor editable para la nota hasta los 30 dias. Despues de los 30 dias, state tendra el valor no_editable impidiento que la nota sea editable por el usuario. en el archivo xml la propiedad readonly de la nota depende del campo state.
 
     @api.depends('age_of_creation')
     def _update_status(self):
@@ -125,8 +109,8 @@ class Notas(models.Model):
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.tcli = demanda_activa.tcli
 
-    tcli = fields.Char() #TODO:
-    # tcli = fields.Char(compute='_get_tcli')  # TODO: Para import la data, es necesario utilizar el campo como fields.Char() y luego comentarlo y descomentarr la el campo como fields.Char(compute=''). Esto es xq necesitamos tenerlo como compute para poder computar los valores a la hora de crear los records pero como los campos computes no nos permiten importar data entonces necestimos compentarlo y utilizar la opcion no computada a la hora de importar la data.
+    tcli = fields.Char() #TODO: # ESte campo es utilizado al momento de importar los logs. Luego de importar los logs entonces lo comentamos y utilizamos el campo computado.
+    # tcli = fields.Char(compute='_get_tcli')  
 
     # .......................................................................................................................... TCLI DESCRIPCION
 
@@ -140,7 +124,7 @@ class Notas(models.Model):
             else:
                 item.tcli_desc = 'CLIENTE ' + str(item.tcli)
 
-    tcli_desc = fields.Char()  # TODO:
+    tcli_desc = fields.Char()  # TODO: Este campo es utilizado al momento de importar los logs. Luego de importar los logs entonces lo comentamo y utilizamos el campo computado.
     # tcli_desc = fields.Char(compute='_compute_tcli_desc')
 
     # .......................................................................................................................... sist

@@ -10,11 +10,11 @@ class Demandas(models.Model):
     _name = 'rf.demandas'
     _description = 'Demandas'
     _rec_name = 'id'
-
     _inherit = ['mail.thread', 'mail.activity.mixin']
-
     _order = 'fecha_demanda desc'
 
+
+    # Estados Legales de las demandas
     state = fields.Selection([
                               ('status_0', 'Sin Observación'),
                               ('status_1', 'Por admisión de demanda   '),
@@ -53,131 +53,51 @@ class Demandas(models.Model):
                               ('status_34','Embargo reflejado en ct y se efectúa dto'),
                               ('status_35','Embargo pendiente')                       
                             ]
-                            , tracking=True, string='Estado Legal',help='This is some help!!',)
-
-  
-
-
-
-    def myfn(self):
-        if self.header_vibility:
-            self.header_vibility = False
-        else:
-            self.header_vibility = True
-
+                            , tracking=True, string='Estado Legal',help='This is some help!!',)   
   
     header_vibility = fields.Boolean(help='This is some help!',default=False)
 
-    # .................................................................................................................................... demandas
-
-    # archivo del cual tomamos los datos para consolidar todas los maestros de demandas.
-    archivo_origen = fields.Char(help='This is some help', )
 
 
-
-    fecha_reg = fields.Date(string='Fecha de registro')
-
-    # Cedula es el No. ID
+    # .................................................................................................................................... Demandas
+    archivo_origen = fields.Char(help='This is some help',)
+    fecha_reg = fields.Date(string='Fecha de registro')    
     cedula = fields.Many2one(
         comodel_name='demo.clientes', string='No. ID', store=True
-    )
-
-    cip = fields.Char(help='This is some help', related='cedula.ruced', store=True)
-
-    @api.depends('codigo_demanda')
-    def _compute_title(self):
-        for item in self:               
-            # item.title = 'Demanda No. ' + str(item.codigo_demanda) + '    -    ' + str(item.cip) + '    -    ' + str(item.cliente_nombre) + '    -    ' + str(item.monto_demanda)
-            item.title_demanda = 'Demanda No. ' + str(item.codigo_demanda) + '        '  + str(item.cip) + '        ' + str(item.cliente_nombre) + '        $' + str(item.monto_demanda)
-
-    title_demanda = fields.Char(help='This is some help', compute='_compute_title', store=True)
-
-    # tcli = fields.Selection(help='This is some help!!',[('P', 'Natural'), ('F', 'Jurídica')], string='CLIENTE') 
-    tcli = fields.Char(help='This is some help', related='cedula.tipo', string='Cliente')
-
-    # .......................................................................................................................... TCLI DESCRIPCION   
-    @api.depends('tcli')
-    def _compute_tcli_desc(self):
-        for item in self:
-            if item.tcli == 'P':
-                item.tcli_desc = 'NATURAL'
-            elif item.tcli == 'F':
-                item.tcli_desc = 'JURÍDICA'
-            else:
-                item.tcli_desc = ''
-                
-    tcli_desc = fields.Char(help='This is some help', compute='_compute_tcli_desc', string='Cliente')
-    
-
-    # codigo_demanda = fields.Char(help='This is some help', default='test')
+    )# Cedula es el No. ID
+    cip = fields.Char(help='This is some help', related='cedula.ruced', store=True)    
+    title_demanda = fields.Char(help='This is some help', compute='_compute_title', store=True)    
+    tcli = fields.Char(help='This is some help', related='cedula.tipo', string='Cliente') # El tcli puede ser P para Cliente Publido, F para Cliente Juridico    
+    tcli_desc = fields.Char(help='This is some help', compute='_compute_tcli_desc', string='Cliente')    # TCLI DESCRIPCION   
     codigo_demanda = fields.Char(help='This is some help', compute='_compute_codigo_demanda', string='Código de Demanda') # el codigo de la demanda es el id
-    # id
-
     cntacliente = fields.Char(help='This is some help', 
         related='cedula.ctacliente', string='Regitro'
     )  # La cuenta cliente es lo que aparece como numero de registro, podemos halar esta cuenta de la tabla de clientes.
-
-
-
-    cntaprestamo = fields.Char(help='This is some help', string='Cuenta de Prestamo', default=' ') # trabajar en la relacion de la cuenta prestamo
-    # cntaprestamo = fields.Char(help='This is some help', compute='_get_cnta_prestamo') # Crear esta funcion de llegar a ser necesario
-
-
-    ck_crear = fields.Boolean(help='This is some help!',string='Mostrar')
-
-    # ---------------------------------------------------------------COMPUTAR ESTE CAMPO 
-    # demanda_nombre = fields.Selection(help='This is some help!!',[('demandaa', 'demanda A'), ('demandab', 'demanda B')], 'DEMANDA: ')
-    demanda_nombre = fields.Char(help='This is some help', compute='_compute_demanda', string='Demanda')
-
-    # ------------------------------------------------------------------RELACIONAR ESTE CAMPO CON LA TABLA DE SUCURSALES (ACTUALIZR EL LOG DE DEMANDAS PARA QUE APUNTEN AL CODIGO CORECTO ESTABLECIDO POR ROBINSON)
-    # sucursal = fields.Selection(help='This is some help!!',[('sucursala', 'sucursal A'), ('sucursalb', 'sucursal B')], 'SUCURSAL: ')
-    sucursal = fields.Many2one('res.company', string='Sucursal')
-    # sucursal = fields.Char(help='This is some help', related='sucursal_name.id', string='SUCURSAL NUMERO: ') #  actualizar este campo para que apunte al campo correct el cual no es id sino numero_empresa   
-    
-
+    cntaprestamo = fields.Char(help='This is some help', string='Cuenta de Prestamo', default=' ') # trabajar en la relacion de la cuenta prestamo. # fields.Char(help='This is some help', compute='_get_cnta_prestamo') # Crear esta funcion de llegar a ser necesario    
+    ck_crear = fields.Boolean(help='This is some help!',string='Mostrar')  
+    demanda_nombre = fields.Char(help='This is some help', compute='_compute_demanda', string='Demanda')    
+    sucursal = fields.Many2one('res.company', string='Sucursal')  
     code_sucursal = fields.Integer(help='This is some help!!', related='sucursal.id')
-
     abogado = fields.Many2one(comodel_name='rf.abogados', string='Abogado'  , help='Hola esto es un mensaje de ayuda')
-
     cliente_nombre = fields.Char(help='This is some help', 
        related='cedula.nombre', string='Nombre del Cliente'
-    )
-
-    # --------------------------------------------------------------------RELACIONAR ESTE CAMPO CON LA TABLA DE PROVINCIAS (ACTUALIZR EL LOG DE DEMANDAS PARA QUE APUNTEN AL CODIGO CORECTO ESTABLECIDO POR ROBINSON)
-    # provincia = fields.Selection(help='This is some help!!',[('provinciaa', 'Provincia A'), ('provinciab', 'Provincia B')], 'PROVINCIA: ')
-    # provincia = fields.Many2one('fc.dirprov') #TODO: ESTA LA CORRECTA RELACION DE PROVINCIA. Esta es la tabla que ha creado Robinson del lado del model demografica
-    provincia = fields.Many2one(comodel_name='rf.provincias')
-
-    # --------------------------------------------------------------------RELACIONAR ESTE CAMPO CON LA TABLA DE JUZGADOS (ACTUALIZR EL LOG DE DEMANDAS PARA QUE APUNTEN AL CODIGO CORECTO ESTABLECIDO POR ROBINSON Y ACTUALIZAR EL LOG DE JUZGADOS PARA QUE TAMBIEN CONTANGAN EL CODIGO CORRECT ESTABLECIDO POR ROBINSON EN LAS COLUMNAS DE PROVINCIAS, ETC)
-    # juzgado = fields.Selection(help='This is some help!!',[('juzgadoa', 'Juzgado A'), ('juzgadob', 'Juzgado B')], string='JUSGADO: ')
-    # juzgado = fields.Selection(help='This is some help!!',[('juzgadoa', 'Juzgado A'), ('juzgadob', 'Juzgado B')], string='JUSGADO: ')
-    juzgado = fields.Many2one(comodel_name='rf.juzgados', string='Juzgado')
-
-    # solicitud_sec_visivility = fields.Boolean(help='This is some help!',
+    )            
+    provincia = fields.Many2one(comodel_name='rf.provincias') # fields.Many2one('fc.dirprov') #TODO: ESTA LA CORRECTA RELACION DE PROVINCIA. Esta es la tabla que ha creado Robinson del lado del model demografica   
+    juzgado = fields.Many2one(comodel_name='rf.juzgados', string='Juzgado')# RELACIONAR ESTE CAMPO CON LA TABLA DE JUZGADOS (ACTUALIZR EL LOG DE DEMANDAS PARA QUE APUNTEN AL CODIGO CORECTO ESTABLECIDO POR ROBINSON Y ACTUALIZAR EL LOG DE JUZGADOS PARA QUE TAMBIEN CONTANGAN EL CODIGO CORRECT ESTABLECIDO POR ROBINSON EN LAS COLUMNAS DE PROVINCIAS, ETC)    
     ck_sol_sec = fields.Boolean(help='This is some help!',
         string='Solicitud de Secuestro')
-
     fecha_demanda = fields.Date(string='Fecha de Demanda')
-
     monto_demanda = fields.Float(string='Monto $')
-
     admitida = fields.Boolean(help='This is some help!',string='Admitida')
-
-    admitida_desc = fields.Text(help='This is some help!!', string='Admitida Descripción')
-    # admitida_desc = fields.Html(string='Admitida Descripción')
-
+    admitida_desc = fields.Text(help='This is some help!!', string='Admitida Descripción') # fields.Html(string='Admitida Descripción')    
     no_admitida = fields.Boolean(help='This is some help!',string='No Admitida')
-
-    no_adm_desc = fields.Text(help='This is some help!!', string='No Admitida Descripción')
-
-    # --------------------------------------------- Este campo apunta al id de la file localizada en la tabla rf_abosust la cual este vinculada a la demanda por el demanda_id
-    # necesito importar las tabla de abogados sustitutos manteniendo la relacion por el codigo y tambien mantener una relacion por el.
-    # Recordar importar las tablas de observaciones/notas para el tab Fin al final.
+    no_adm_desc = fields.Text(help='This is some help!!', string='No Admitida Descripción')    
     abogados_sustitutos_ids = fields.One2many(
-        'rf.abosust', 'demanda_id', string='Abogado')
+        'rf.abosust', 'demanda_id', string='Abogado') # Este campo apunta al id de record en la tabla rf_abosust la cual este vinculada a la demanda por el demanda_id
+    
+
 
     # .................................................................................................................................... Secuestros
-
     sec_fianza = fields.Boolean(help='This is some help!',string='Fianza', )
     sec_fecha_consignacion = fields.Date(string='Consignación')
     sec_fc_visivility = fields.Boolean(help='This is some help!',)
@@ -185,57 +105,43 @@ class Demandas(models.Model):
     sec_devolucion_fianza_fecha = fields.Date(string='Fecha')
     sec_df_visivility = fields.Boolean(help='This is some help!',)
     sec_fianza_monto = fields.Float(string='Monto $')
-
     sec_fecha_retiro = fields.Date(string='Fecha Retiro')
     sec_fr_visivility = fields.Boolean(help='This is some help!',)
-
     sec_fecha_auto = fields.Date(string='Fecha Auto')
     sec_fa_visivility = fields.Boolean(help='This is some help!',)
     sec_fecha_oficio = fields.Date(string='Fecha Oficio')
     sec_fo_visivility = fields.Boolean(help='This is some help!',)
     sec_num_auto = fields.Char(help='This is some help', string='No. Auto')
     sec_num_oficio = fields.Char(help='This is some help', string='No. Oficio')
-
     sec_costa = fields.Float(string='Costas $')
     sec_total = fields.Float(string='Total $')
 
-    # .................................................................................................................................... Bienes // agregar los campos que yo he definido para poder manejar los radio button campos.
 
+    # .................................................................................................................................... Bienes 
     bienes = fields.Boolean(help='This is some help!',string='Bienes a Embargar o Secuestrar', )
-
     bien_finca_prop = fields.Boolean(help='This is some help!',string='Finca o Propiedades')
     bien_salario = fields.Boolean(help='This is some help!',string='Salario')
     bien_ambos = fields.Boolean(help='This is some help!',string='Ambos')
-
     ckopbien = fields.Integer(help='This is some help!!', )
-
     bien_desc = fields.Text(help='This is some help!!', )
-
     bien_salario_type = fields.Many2one(comodel_name='rf.bienembargable')
-
     bien_planilla_type = fields.Selection([('planillaa', '(idPlanilla)'), ('planillab', 'Contraloria'), (
         'planillac', 'Caja Seguro Social'), ('planillad', 'Empresa Privada')], help='This is some help!!')
-
     bien_planilla_id = fields.Char(help='This is some help', string='ID Planilla')
-
     bien_ministerio = fields.Char(help='This is some help', string='Ministerio')
-
     bien_planilla = fields.Char(help='This is some help', string='Planilla')
-
     bien_posicion = fields.Char(help='This is some help', string='Posición')
 
-    # .................................................................................................................................... Notificaciones
 
+    # .................................................................................................................................... Notificaciones
     notificacion = fields.Boolean(help='This is some help!',
         string='Notificación', default=False, store=True)
     noti_fecha = fields.Date(string='Fecha')
     noti_nf_visivility = fields.Boolean(help='This is some help!',)
-
     noti_client = fields.Boolean(help='This is some help!',string='Cliente')
     noti_emplazamiento = fields.Boolean(help='This is some help!',string='Emplazamiento')
     noti_abogado = fields.Boolean(help='This is some help!',string='Abogado')
     ckopnotif = fields.Integer(help='This is some help!!', )
-
     noti_abogado_nombre = fields.Char(help='This is some help', string='Nombre')
     noti_transaction = fields.Boolean(help='This is some help!',string='Transacción')
     noti_transaction_fecha = fields.Date(string='Fecha')
@@ -249,58 +155,30 @@ class Demandas(models.Model):
     noti_db_visivility = fields.Boolean(help='This is some help!',string='Fecha')
 
     # .................................................................................................................................... Embargos
-
     embargo_visibility = fields.Boolean(help='This is some help!',
-        string='Embargo', store=True)
-
-    def _update_estado(self):
-        for item in self:
-            if item.embargo_visibility:            
-                item.estado = 'estado_embargo'
-            else:
-                item.estado = 'estado_proceso'
-    
-    def _inverse_estado(self):
-        for item in self:
-            if item.embargo_visibility:      
-                item.embargo_visibility = False
-            else:
-                item.embargo_visibility = True
-
-
-    # Estado soicitado por 
-    # estado = fields.Selection([('estado_proceso', 'En Proceso'),('estado_embargo', 'En Embargo')], string='Estado')
+        string='Embargo', store=True)    
     estado = fields.Selection([('estado_proceso', 'En Proceso'),('estado_embargo', 'En Embargo')], help='This is some help!!', default='estado_proceso', string='Estado', compute='_update_estado', inverse='_inverse_estado', groups='modulo_legal.grupo_registros_fiscales_admin')
-
     emb_fecha_retiro = fields.Date(string='Fecha Retiro')
     emb_fr_visivility = fields.Boolean(help='This is some help!',)
-
     emb_fecha_auto = fields.Date(string='Fecha Auto')
     emb_fa_visivility = fields.Boolean(help='This is some help!',)
     emb_num_auto = fields.Char(help='This is some help', string='No. Auto')
     emb_fecha_oficio = fields.Date(string='Fecha Oficio')
     emb_fo_visivility = fields.Boolean(help='This is some help!',)
     emb_num_oficio = fields.Char(help='This is some help', string='No. Oficio')
-
     emb_costas = fields.Float(string='Costas $')
     emb_total = fields.Float(string='Total $')
-
     adj_finca = fields.Boolean(help='This is some help!',string='Adjudicación de Finca')
     adj_finca_fecha_retiro = fields.Date(string='Fecha Retiro')
     adj_finca_fr_visivility = fields.Boolean(help='This is some help!',)
-
     adj_emb_fecha_auto_st = fields.Date(string='Fecha Auto')
     adj_emb_fa_visivility_st = fields.Boolean(help='This is some help!',)
-
     adj_emb_fecha_auto_nd = fields.Date(string='Fecha Auto')
     adj_emb_fa_visivility_nd = fields.Boolean(help='This is some help!',)
-
     adj_num_auto_st = fields.Char(help='This is some help', string='No. Auto')
     adj_num_auto_nd = fields.Char(help='This is some help', string='No. Auto')
-
     adj_costas = fields.Float(string='Costas $')
     adj_total = fields.Float(string='Total $')
-
     adj_finca_fecha_solic_remate = fields.Date(
         string='Solicitud Remate')
     adj_finca_fs_visivility = fields.Boolean(help='This is some help!',)
@@ -309,90 +187,60 @@ class Demandas(models.Model):
     adj_finca_rj_visivility = fields.Boolean(help='This is some help!',)
     monto_base_remate = fields.Float(string='Monto Base Remate')
 
-    # .................................................................................................................................... Ampliaciones 
 
+    # .................................................................................................................................... Ampliaciones 
     amp_emb = fields.Boolean(help='This is some help!',string='Ampliación de Embargo', )
     ae_retiro = fields.Date(string='Fecha Retiro')
     ae_retiro_visivility = fields.Boolean(help='This is some help!',)
-
     ae_fecha_auto = fields.Date(string='Fecha Auto')
     ae_fa_visivility = fields.Boolean(help='This is some help!',)
-
     ae_fecha_oficio = fields.Date(string='Fecha Oficio')
     ae_fo_visivility = fields.Boolean(help='This is some help!',)
-
     ae_num_auto = fields.Char(help='This is some help', string='No. Auto')
     ae_num_oficio = fields.Char(help='This is some help', string='No. Oficio')
-
     ae_bien_ampliar = fields.Text(help='This is some help!!', string='Bien a Ampliar')
-
     amp_sec = fields.Boolean(help='This is some help!',string='Amplicación de Secuestro', )
     as_fr = fields.Date(string='Fecha Retiro')
     as_fr_visivility = fields.Boolean(help='This is some help!',)
-
     as_fecha_auto = fields.Date(string='Fecha Auto')
     as_fa_visivility = fields.Boolean(help='This is some help!',)
-
     as_fecha_oficio = fields.Date(string='Fecha Oficio')
     as_fo_visivility = fields.Boolean(help='This is some help!',)
-
     as_num_auto = fields.Char(help='This is some help', string='No. Auto')
     as_num_oficio = fields.Char(help='This is some help', string='No. Oficio')
-
     as_bien_ampliar = fields.Text(help='This is some help!!', string='Bien a Secuestrar')
 
+
     # .................................................................................................................................... Fin / En Cierre?
-
     fin_cerrar_archivar = fields.Boolean(help='This is some help!',string='Cerrar y Archivar Proceso')
-
     fin_cancel_deuda = fields.Boolean(help='This is some help!',string='Por Cancelación Deuda')
-
     fin_cancelacion = fields.Date(string='Cancelación')
-
     fin_c_visivility = fields.Boolean(help='This is some help!',)
-
-    # agregar estas columnas al excel.
     fin_efectivo = fields.Boolean(help='This is some help!',string='Efectivo')
     fin_cheque = fields.Boolean(help='This is some help!',string='Cheque')
-    fin_deposito_judicial = fields.Boolean(help='This is some help!',string='Deposito Judicial')
-
-    # este campo mantendra el valor de los campos arriba (0, 1, 2)
+    fin_deposito_judicial = fields.Boolean(help='This is some help!',string='Deposito Judicial')    
     optcancel = fields.Integer(help='This is some help!!', )
-
     fin_solic_desistimiento = fields.Date(string='Solicitud Desistimiento')
     fin_sd_visivility = fields.Boolean(help='This is some help!',)
     fin_oficio_desistimiento = fields.Date(string='Oficio Desistimiento')
-    fin_of_visivility = fields.Boolean(help='This is some help!',)
-
-    # esta campo junto al campo fin_retira_cliente tambien afectan el campo   optejedesisti
+    fin_of_visivility = fields.Boolean(help='This is some help!',)    
     fin_env_emp = fields.Boolean(help='This is some help!',)
     fin_env_emp_fecha = fields.Date(string='Envia la Empresa')
     fin_env_emp_visibility = fields.Boolean(help='This is some help!',)
     fin_retira_cliente = fields.Boolean(help='This is some help!',string='Retira Cliente')
-
-    # campo que almacena el valor en la base de datos. el valos depende de si se selecciona fin_env_emp o fin_retira_cliente
     optejedesisti = fields.Integer(help='This is some help!!', )
-
     fin_retiro_dem = fields.Boolean(help='This is some help!',
-        string='Por Retiro de Demanda (Antes de Admisión)')
-        
+        string='Por Retiro de Demanda (Antes de Admisión)')        
     fin_rdem_solic = fields.Date(string='Solicitud: ')
-
     fin_rdem_solic_visivility = fields.Boolean(help='This is some help!',)
     fin_entrega_desgl_prueb = fields.Date(string='Entrega Desglose Pruebas: ')
     fin_entrega_desgl_prueb_visivility = fields.Boolean(help='This is some help!',)
 
-    # .................................................................................................................................... Libro
 
+    # .................................................................................................................................... Libro Legal
     nota_id = fields.One2many('rf.notes', 'demanda_id', string='Notes: ')
 
-
-    # .................................................................................................................................... Libro
-
-    galeria_id = fields.One2many('rf.galeria', 'demanda_id', string='Galeria: ')
-
-    galeria_imagen = fields.Binary(related='galeria_id.imagen')
-
+   
     # .................................................................................................................................... Columnas generales o internas
     codtran = fields.Char(help='This is some help', )
     status = fields.Char(help='This is some help', )
@@ -401,6 +249,32 @@ class Demandas(models.Model):
     clave = fields.Char(help='This is some help', )
     cambios = fields.Char(help='This is some help', )
 
+
+
+
+    #.................................................................................................................................... Funciones utilizadas para computad algunos campos
+
+    # Computamos el titulo de la demanda
+    @api.depends('codigo_demanda')
+    def _compute_title(self):
+        for item in self:                          
+            item.title_demanda = 'Demanda No. ' + str(item.codigo_demanda) + '        '  + str(item.cip) + '        ' + str(item.cliente_nombre) + '        $' + str(item.monto_demanda)
+
+    def myfn(self):
+        if self.header_vibility:
+            self.header_vibility = False
+        else:
+            self.header_vibility = True
+
+    @api.depends('tcli')
+    def _compute_tcli_desc(self):
+        for item in self:
+            if item.tcli == 'P':
+                item.tcli_desc = 'NATURAL'
+            elif item.tcli == 'F':
+                item.tcli_desc = 'JURÍDICA'
+            else:
+                item.tcli_desc = ''                
 
     @api.onchange('admitida')
     def _update_admitida(self):
@@ -417,9 +291,8 @@ class Demandas(models.Model):
         else:
             self.admitida = True
         self.admitida_desc = ''
-
+    
     # Bienes a Embargar Checks handlers
-
     @api.onchange('bien_finca_prop')
     def _bien_finca_prop_onchange_handler(self):
         if self.bien_finca_prop:
@@ -442,7 +315,6 @@ class Demandas(models.Model):
             self.ckopbien = 2
 
   # Notificacion Checks handlers
-
     @api.onchange('noti_client')
     def _noti_client_onchange_handler(self):
         if self.noti_client:
@@ -461,8 +333,8 @@ class Demandas(models.Model):
             self.noti_client = False
             self.noti_emplazamiento = False
 
-    # En Cierra / Fin  Checks handlers
 
+    # En Cierra / Fin  Checks handlers
     @api.onchange('fin_cancel_deuda')
     def _fin_cancel_deuda_onchange_handler(self):
         if self.fin_cancel_deuda:
@@ -529,4 +401,18 @@ class Demandas(models.Model):
     # Compute demanda nombre
     def _compute_demanda(self):
         for item in self:
-            item.demanda_nombre = 'Demanda: [' + str(item.fecha_demanda) + '] ' + str(item.monto_demanda) + ' <' + str(item.code_sucursal) + '>' # TODO: Necesito tomar el codigo de la compañia y concatenarlo
+            item.demanda_nombre = 'Demanda: [' + str(item.fecha_demanda) + '] ' + str(item.monto_demanda) + ' <' + str(item.code_sucursal) + '>'
+
+    def _update_estado(self):
+        for item in self:
+            if item.embargo_visibility:            
+                item.estado = 'estado_embargo'
+            else:
+                item.estado = 'estado_proceso'    
+
+    def _inverse_estado(self):
+        for item in self:
+            if item.embargo_visibility:      
+                item.embargo_visibility = False
+            else:
+                item.embargo_visibility = True 

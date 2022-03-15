@@ -41,12 +41,7 @@
                 <field name='tipo' string='Tipo'/>
                 <field name='codigo' string='Código'/>
                 <field name='descrip' string='Descripción'/>
-                <field name='tags' string='Tags'/>
-                <!-- <field name='p0' string=''/>
-                <field name='p1' string=''/>
-                <field name='p2' string=''/>
-                <field name='p3' string=''/>
-                <field name='ubi' string=''/> -->
+                <field name='tags' string='Tags'/>              
             </tree>
         </field>
     </record>

@@ -13,7 +13,7 @@ class AbogadosSustitutos(models.Model):
     demanda_id = fields.Char(default='_get_context_demanda_id')
     
 
-    cntacliente = fields.Char() # TODO:
+    cntacliente = fields.Char() # TODO: Este campo es utilizado solamente al momento de importar los logs. Luego de importar los logs comentamos este campo y utilizamos el campo computado.
     # cntacliente = fields.Char(compute='_get_cta_cliente')
 
 
@@ -28,15 +28,12 @@ class AbogadosSustitutos(models.Model):
     renglon = fields.Integer()
     clave = fields.Char()
 
-    tcli = fields.Char()  # TODO:
-    # tcli = fields.Char(compute='_get_tcli') #TODO: Para import la data, es necesario utilizar el campo como fields.Char() y luego comentarlo y descomentarr la el campo como fields.Char(compute=''). Esto es xq necesitamos tenerlo como compute para poder computar los valores a la hora de crear los records pero como los campos computes no nos permiten importar data entonces necestimos compentarlo y utilizar la opcion no computada a la hora de importar la data.
+    tcli = fields.Char()  # TODO: Utilizamos este campo, solamente para imporat los logs. luego de importar los logs comentamos este campo y utilizamos el campo computado.
+    # tcli = fields.Char(compute='_get_tcli')
 
 
     cia = fields.Char(default='')
-    codtran = fields.Char(default='*L')
-
-
-    # abogado_nombre = fields.Char(related='abogado_id.nombre')
+    codtran = fields.Char(default='*L')    
 
     ea = fields.Boolean() #status del abogado. 1 si esta activo o con el poder de una demanda. 0 si ya ha pasado el periodo en el cual el fue responsable por esta demanda.
 
@@ -52,14 +49,12 @@ class AbogadosSustitutos(models.Model):
 
     def _get_cta_cliente(self):          
         demandas_model =  self.env['rf.demandas']
-        parent_id = self.env.context.get('parent_id')
-        # demandas_all = demandas_model.search([])
+        parent_id = self.env.context.get('parent_id')        
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.cntacliente = demanda_activa.cntacliente
     
     def _get_tcli(self):
         demandas_model =  self.env['rf.demandas']
-        parent_id = self.env.context.get('parent_id')
-        # demandas_all = demandas_model.search([])
+        parent_id = self.env.context.get('parent_id')        
         demanda_activa = demandas_model.search([('id', '=', parent_id)])
         self.tcli = demanda_activa.tcli

@@ -17,11 +17,8 @@
                     decoration-info="state=='status_20' or state=='status_21' or state=='status_22' or state=='status_23' or state=='status_24' or state=='status_25'"  
                     decoration-success="state=='status_26' or state=='status_27' or state=='status_28' or state=='status_29' or state=='status_30' or state=='status_31' or state=='status_32' or state=='status_33' or state=='status_34' or state=='status_35'"   
                 />
-                <!-- decoration-info="['|', state == '1', ('state', '=', '5')]"    -->
 
-                <!--  decoration-danger, decoration-warning, decoration-primary, decoration-success, decoration-info -->
                 <field name='sucursal' string='Empresa'/>
-                <!-- <field name='codigo_demanda' string='ID' /> -->
                 <field name='cedula' string='Cédula' />
                 <field name='cliente_nombre' string='Cliente'/>
                 <field name='fecha_reg' string='Fecha de Demanda'/>

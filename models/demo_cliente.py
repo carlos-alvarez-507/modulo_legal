@@ -8,9 +8,6 @@ class DemoCliente(models.Model):
 
     _rec_name ="ruced"
 
-    # _inherit = ["mail.thread", 'mail.activity.mixin']
-
-
 
     cia = fields.Char()
     ctacliente = fields.Char()

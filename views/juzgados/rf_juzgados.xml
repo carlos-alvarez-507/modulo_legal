@@ -42,16 +42,9 @@
                 <field name='codigo' string='Código'/>
                 <field name='descripcion' string='Descripción'/>
                 <field name='tipo' string='Tipo'/>
-                <!-- <field name='ckpb' string=''/> -->
                 <field name='monto' string='Monto'/>
                 <field name='ctacont' string='Cuenta Cliente'/>
                 <field name='cia' string='Empresa'/>
-                <!-- <field name='letra' string=''/>
-                <field name='deta0' string=''/>
-                <field name='deta1' string=''/>
-                <field name='deta2' string=''/>
-                <field name='p1era' string=''/>
-                <field name='p2da' string=''/> -->
             </tree>
         </field>
     </record>

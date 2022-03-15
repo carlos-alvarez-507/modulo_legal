@@ -1,85 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- <!DOCTYPE doc [
-    <!ENTITY otherFile SYSTEM "/registros_fiscales/views/secuestros/test.xml">
-]> -->
-
-<!-- <!DOCTYPE otherFile [<!ENTITY school "/registros_fiscales/views/demandas/kanban-view.xm">]> -->
-
 <odoo>
-
-
-    <template id="assets_backend_report2" name="hr_attendance informes" inherit_id="web.assets_backend">
-        <xpath expr="." position="inside">
-
-
-            <script type="text/javascript" src="/modulo_legal/static/src/js/testing.js"></script>
-
-
-            <!-- <link rel="stylesheet" type="text/scss" href="/hr_informes_asistencias/static/src/scss/hr_attendance.scss"/> -->
-
-        </xpath>
-    </template>
 
     <!-- form view -->
     <record id='demandas_form' model='ir.ui.view'>
         <field name="name">rf.demandas.form.vie</field>
         <field name="model">rf.demandas</field>
         <field name="arch" type="xml">
-            <!-- <form>
-                <field name='cedula'/>
-            </form> -->
 
             <form>
 
-
                 <div class="container-fluid">
-
                     <div class="row">
-
                         <div class="col-md-12">
-
                             <header>
-                                <!-- <div class='px-4 bg-primary'>
-                                </div> -->
-                                <!-- <div class='px-4 bg-primary'>
-                                </div> -->
-
-                                <!-- <button name='myfn' string='' type='object' class='btn-info' /> -->
-                                <!-- eval="[(4,ref('grupo_registros_fiscales_admin'))]" -->
                                 <field name='estado' widget='statusbar' options="{'clickable': 1}" class='d-flex mr-4 justify-content-evenly' decoration-danger="estado=='estado_embargo'" decoration-info="estado=='estado_proceso'" />
-
-                                <!-- <field name='header_vibility' id='header_vibility' string='Mostrar/Ocultar Estados' attrs="{'invisible': ['|', ('header_vibility','=',False), ('header_vibility','=',True)]}" /> -->
-
-
                             </header>
-
                         </div>
                     </div>
-
-
                 </div>
 
 
                 <div class="container-fluid">
-
                     <div class="row">
-
                         <div class="col-md-12">
-
                             <header>
-                                <!-- <div class='px-4 bg-primary'>
-                                </div> -->
-                                <!-- <div class='px-4 bg-primary'>
-                                </div> -->
-
                                 <button name='myfn' string='Estado' type='object' class='btn-info' />
-
                                 <field name='state' widget='statusbar' options="{'clickable': 1}" class='d-flex mr-4 justify-content-evenly' attrs="{'invisible': [('header_vibility','=',False)]}" />
-
                                 <field name='header_vibility' id='header_vibility' string='Mostrar/Ocultar Estados' attrs="{'invisible': ['|', ('header_vibility','=',False), ('header_vibility','=',True)]}" />
-
-
                             </header>
 
                         </div>
@@ -90,7 +38,6 @@
 
 
                 <div class='container-fluid'>
-                    <!-- <div class="container"> -->
                     <div class='row'>
                         <div class="col-md-12">
                             <field name='title_demanda' class='font-weight-bold' style='font-size: 14px; font-weight: 700' />
@@ -101,7 +48,7 @@
                             <notebook>
                                 <page string='Demanda'>
                                     <div class='container-fluid' style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26);  border-radius: 4px;'>
-                                        <!-- <div class="container" style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26); padd border-radius: 4px-->
+
                                         <div class="row mt-2">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-4">
 
@@ -110,7 +57,7 @@
                                                         <div class="row px-4">
                                                             <div class="col-md-4 d-flex align-items-center justify-content-left">
                                                                 <label for="fecha_reg"></label>
-                                                                <!-- <field name='fin_of_visivility' class="form-check-input" /> -->
+
                                                             </div>
                                                             <div class="col-md-4" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
                                                                 <field name="fecha_reg" class="form-control font-weight-bold" id='fecha_reg' />
@@ -141,7 +88,7 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- part 2 -->
+
                                                 <div class="form-row mt-2  d-flex align-items-center justify-content-start">
 
                                                     <div class="form-group col-md-2">
@@ -210,7 +157,7 @@
 
                                                 <div class='form-row mt-2'>
                                                     <div class='col-md-4'>
-                                                        <!-- part 3 -->
+
                                                         <div class="form-row mt-2">
                                                             <div class="form-group col-md-12">
                                                                 <div class="row px-4 ">
@@ -254,7 +201,6 @@
                                                             </div>
 
                                                         </div>
-                                                        <!-- add -->
 
                                                         <div class="row px-4">
                                                             <div class="form-group col-md-12">
@@ -266,8 +212,6 @@
                                                                         <field name="fecha_demanda" class="form-control font-weight-bold" id="fecha_demanda" />
                                                                     </div>
                                                                 </div>
-                                                                <!-- <label for="fecha_demanda">FECHA DEMANDA: </label>
-                                                                        <field name="fecha_demanda" class="form-control font-weight-bold" id="fecha_demanda" /> -->
                                                             </div>
                                                             <div class="form-group col-md-12 ">
                                                                 <div class="row">
@@ -322,7 +266,6 @@
                                                         <div class='row px-4'>
                                                             <div class="col-10 col-md-10">
                                                                 <notebook class='ml-4'>
-                                                                    <!-- <page string="Historial de Abogados Sustituto" attrs="{'invisible': [('ck_sol_sec','=',False)]}"> -->
                                                                     <page string="Historial de Abogados Sustituto">
                                                                         <field name="id" invisible="1" />
                                                                         <field name="abogados_sustitutos_ids" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
@@ -369,131 +312,18 @@
                                                 </div>
 
 
-                                                <!-- part 4 -->
-                                                <!-- <div class="form-row mt-2">
-                                                            <div class="form-group col-md-4">
-
-                                                                <div class="row px-4 ">
-                                                                    <div class="col-md-4 d-flex align-items-center justify-content-left">
-                                                                        <label for="provincia"></label>
-                                                                    </div>
-                                                                    <div class="col-md-4" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                        <field name='provincia' class="form-control" id="provincia" />
-                                                                    </div>
-                                                                </div> 
-
-
-                                                            </div>
-                                                            <div class="form-group col-md-4">                                                              
-                                                                <div class="row px-4 ">
-                                                                    <div class="col-md-4 d-flex align-items-center justify-content-left">
-                                                                        <label for="juzgado"></label>
-                                                                    </div>
-                                                                    <div class="col-md-4" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                        <field name="juzgado" class="form-control" id="juzgado" />
-                                                                    </div>
-                                                                </div> 
-                                                            </div>
-                                                            <div class="form-group d-flex align-items-center justify-content-center  col-md-4" attrs="{'invisible': [('ck_crear','=',False)]}">
-                                                                <div class="row px-4 ">
-                                                                    <div class="col-md-4" >
-                                                                        <field name="ck_sol_sec" class="form-check-input" id="ck_sol_sec" />
-                                                                    </div>
-                                                                    <div class="col-md-4 d-flex align-items-center justify-content-left">
-                                                                        <label class="form-check-label" for="ck_sol_sec"></label>
-                                                                    </div>
-                                                                </div>                                                                 
-                                                            </div>
-                                                        </div> -->
-
-                                                <!-- Part 5 -->
-                                                <!-- <div class="form-row mt-2">
-                                                    <div class='form-group col-md-6'>
-                                                        <div class="row px-4">
-                                                            <div class="form-group col-md-6">
-                                                                <div class="row">
-                                                                    <div class="col-md-4 d-flex align-items-center justify-content-left">
-                                                                        <label for="fecha_demanda"></label>
-                                                                    </div>
-                                                                    <div class="col-md-8" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                        <field name="fecha_demanda" class="form-control font-weight-bold" id="fecha_demanda" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-group col-md-6 ">
-                                                                <label for="monto_demanda">Monto $: </label>
-                                                                <field name="monto_demanda" class="form-control font-weight-bold" id="monto_demanda" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="row px-4">
-                                                            <legend class="col-form-label col-sm-12 pt-0">AdmisiÃ³n Demanda</legend>
-                                                            <div class="col-sm-12 d-flex align-items-center justify-content-start">
-                                                                <div class="form-check p-4 d-flex align-items-center justify-content-start">
-                                                                    <field class="form-check-input" name="admitida" id="admitida" />
-                                                                    <label class="form-check-label" for="admitida">ADMITIDA</label>
-                                                                </div>
-                                                                <div class="form-check p-4 d-flex align-items-center justify-content-start">
-                                                                    <field class="form-check-input" name="no_admitida" id="no_admitida" />
-                                                                    <label class="form-check-label" for="no_admitida">NO ADMITIDA</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row px-4">
-                                                            <div class="form-group col-md-4">
-                                                                <field name="admitida_desc" id="admitida_desc" attrs="{'invisible': [('admitida','=',False)]}" />
-                                                            </div>
-                                                            <div class="form-group col-md-4">
-                                                                <field name="no_adm_desc" id="no_adm_desc" attrs="{'invisible': [('no_admitida','=',False)]}" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div> -->
-
-                                                <!-- Part 6 -->
-                                                <!-- <div class="form-row px-4">
-                                                    <div class="form-group col-md-6">
-
-                                                        <div class="row px-4 ">
-                                                            <div class="col-md-4 d-flex align-items-center justify-content-left">
-                                                                <label for="codigo_demanda"></label>
-                                                            </div>
-                                                            <div class="col-md-4" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                <field name="codigo_demanda" class="form-control font-weight-bold" id="codigo_demanda" />
-                                                            </div>
-                                                        </div>
-
-
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-
-                                                        <div class="row px-4 ">
-                                                            <div class="col-md-4 d-flex align-items-center justify-content-left">
-                                                                <label for="cntaprestamo"></label>
-                                                            </div>
-                                                            <div class="col-md-4" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                <field name="cntaprestamo" class="form-control font-weight-bold" id="cntaprestamo" />
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div> -->
                                             </div>
                                         </div>
-                                        <!-- </div> -->
                                     </div>
 
                                 </page>
                                 <page string='Secuestro'>
-                                    <!-- part 1 -->
-                                    <!-- <div class='container-fluid p-4' style='background-color: border-radius: 4px-->
-                                    <!-- <div class="container text-white" style='background-color: #3D9970; box-shadow: 2px 0 2p border-radius: 4px-->
+
                                     <div class='container-fluid'>
                                         <div class="container mt-4" style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26);  border-radius: 4px; padding:24px   ;'>
                                             <div class="row mt-4">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
-                                                    <!-- PART 1 -->
                                                     <div class="form-row mt-2 ">
                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
                                                             <div class="form-check d-flex align-items-center justify-content-start">
@@ -503,16 +333,13 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- PART 2 -->
                                                     <div class='form-row mt-2 '>
                                                         <div class="form-group col-md-6 ">
                                                             <div class="row px-4">
                                                                 <div class="form-check col-md-5 d-flex align-items-center justify-content-between">
                                                                     <label class="form-check-label" for="sec_fecha_consignacion"></label>
-                                                                    <!-- <field name='sec_fc_visivility' class="form-check-input" attrs="{ 'readonly': [('sec_fianza','=',False)]}" /> -->
                                                                 </div>
                                                                 <div class="col-md-7" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                    <!-- <field name="sec_fecha_consignacion" class="form-control font-weight-bold" attrs="{ 'readonly': [('sec_fc_visivility','=',False)]}" /> -->
                                                                     <field name="sec_fecha_consignacion" class="form-control font-weight-bold" />
                                                                 </div>
                                                             </div>
@@ -528,7 +355,6 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- PART 3 -->
                                                     <div class='form-row mt-2 '>
 
                                                         <div class="form-group col-md-6 ">
@@ -557,11 +383,9 @@
                                                     </div>
 
 
-                                                    <!-- PART 5 -->
                                                     <div class='form-row mt-2 '>
 
                                                         <div class="form-group col-md-6 ">
-                                                            <!-- PART 4 -->
                                                             <div class="form-row mt-2">
                                                                 <div class="form-group col-md-12">
                                                                     <div style='font-weight: 700'>
@@ -584,7 +408,6 @@
 
                                                     </div>
 
-                                                    <!-- PART 6 -->
                                                     <div class='form-row mt-2 '>
                                                         <div class="form-group col-md-6 ">
                                                             <div class="row px-4">
@@ -610,7 +433,6 @@
 
                                                     </div>
 
-                                                    <!-- PART 7 -->
                                                     <div class='form-row mt-2  '>
                                                         <div class="form-group col-md-6">
                                                             <div class="row px-4">
@@ -664,7 +486,6 @@
                                             <div class="row mt-2">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
-                                                    <!-- PART 1 -->
                                                     <div class="form-row mt-2 ">
                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
                                                             <div class="form-check d-flex align-items-center justify-content-start">
@@ -674,7 +495,6 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- PART 2 -->
                                                     <div class='form-row mt-2 '>
                                                         <div class="form-group col-md-4 ">
                                                             <div class="form-row mt-2 ">
@@ -719,7 +539,6 @@
                                                                 </div>
                                                             </div>
 
-                                                            <!-- Planilla Dynamic -->
                                                             <div class="form-row mt-2 " attrs="{'invisible': [('bien_finca_prop','=',True)]}">
                                                                 <div class="form-group col-md-12">
                                                                     <div style='font-weight: 700'>
@@ -728,7 +547,6 @@
                                                                 </div>
                                                             </div>
 
-                                                            <!-- Planilla Dynamic -->
                                                             <div class="form-row mt-2 " attrs="{'invisible': ['|', ('bien_finca_prop','=',True), ('bien_planilla_type','=','planillab')]}">
                                                                 <div class="form-group col-md-12">
                                                                     <field class="form-control font-weight-bold" name='bien_planilla_id' />
@@ -786,7 +604,6 @@
                                         <div class="container" style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26);  border-radius: 4px; padding:24px   ;'>
                                             <div class="row mt-2">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <!-- PART 1 -->
                                                     <div class="form-row mt-2 ">
                                                         <div class="form-group col-md-12 d-flex align-items-center justify-content-start ">
                                                             <div class="form-check d-flex align-items-center justify-content-start">
@@ -796,18 +613,12 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- PART 2 -->
                                                     <div class='form-row mt-2 '>
                                                         <div class="form-group col-md-8 ">
                                                             <div class="row px-4">
-                                                                <!-- <div class="form-check col-md-5 d-flex align-items-start justify-content-between">
-                                                                        <label class="form-check-label" for="noti_fecha"></label>
-                                                                        <field name='noti_nf_visivility' class="form-check-input" attrs="{'readonly': [('notificacion', '=', False)]}" />
-                                                                    </div> -->
+
                                                                 <div class="col-md-7">
-                                                                    <!-- <div class="row" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                            <field name="noti_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('noti_nf_visivility','=',False)]}" />
-                                                                        </div> -->
+
                                                                     <div class="row px-4">
                                                                         <div class="form-check col-md-5 d-flex align-items-center justify-content-between">
                                                                             <label class="form-check-label" for="noti_fecha"></label>
@@ -898,18 +709,6 @@
                                                                 </div>
                                                             </div>
 
-                                                            <!-- <div class="row px-4 m-4">
-                                                                    <div class="form-check col-md-5 d-flex align-items-start justify-content-between">
-                                                                        <label class="form-check-label" for="noti_solicitud_fecha"></label>
-                                                                        <field name='noti_sf_visivility' class="form-check-input" attrs="{'readonly': [('noti_solicitud', '=', False)]}" />
-                                                                    </div>
-                                                                    <div class="col-md-7">
-                                                                        <div class="row" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                            <field name="noti_solicitud_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('noti_sf_visivility', '=', False)]}" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div> -->
-
 
                                                             <div class="row px-4">
                                                                 <div class="form-check col-md-5 d-flex align-items-center justify-content-between">
@@ -933,17 +732,6 @@
                                                                 </div>
                                                             </div>
 
-                                                            <!-- <div class="row px-4 m-4">
-                                                                    <div class="form-check col-md-5 d-flex align-items-start justify-content-between">
-                                                                        <label class="form-check-label" for="noti_db_fecha"></label>
-                                                                        <field name='noti_db_visivility' class="form-check-input" attrs="{'readonly': [('noti_denuncia_bienes', '=', False)]}" />
-                                                                    </div>
-                                                                    <div class="col-md-7">
-                                                                        <div class="row" style='background-color: white; border-radius: 1px solid 4px; border-radius: 4px;'>
-                                                                            <field name="noti_db_fecha" class="form-control font-weight-bold" attrs="{'readonly': [('noti_db_visivility', '=', False)]}" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div> -->
 
                                                             <div class="row px-4">
                                                                 <div class="form-check col-md-5 d-flex align-items-center justify-content-between">
@@ -967,7 +755,6 @@
                                     <div class="container-fluid">
                                         <div class="container" style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26);  border-radius: 4px; padding:24px   ;'>
 
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-12">
                                                     <div class="form-check d-flex align-items-center justify-content-start">
@@ -978,7 +765,6 @@
                                             </div>
 
 
-                                            <!-- PART 2 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-6">
                                                     <div class="row px-4">
@@ -993,7 +779,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- PART 3 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-6">
                                                     <div class="row px-4 ">
@@ -1020,7 +805,6 @@
                                             </div>
 
 
-                                            <!-- PART 4 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-6">
                                                     <div class="row px-4">
@@ -1062,7 +846,6 @@
                                             </div>
 
 
-                                            <!-- PART 5 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-12">
                                                     <div class="form-check d-flex align-items-center justify-content-start">
@@ -1073,7 +856,6 @@
                                             </div>
 
 
-                                            <!-- PART 6 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-4">
                                                     <div class="row px-4">
@@ -1088,7 +870,6 @@
                                                 </div>
                                             </div>
 
-                                            <!-- PART 6 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-4">
                                                     <div class="row px-4">
@@ -1125,7 +906,6 @@
                                             </div>
 
 
-                                            <!-- PART 6 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-4">
                                                     <div class="row px-4">
@@ -1162,7 +942,6 @@
                                             </div>
 
 
-                                            <!-- PART 6 -->
                                             <div class='form-row mt-2  '>
                                                 <div class="form-group col-md-4 mt-2">
                                                     <div class="row px-4 mt-2 ">
@@ -1211,7 +990,6 @@
                                     <div class="container-fluid">
                                         <div class="container" style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26);  border-radius: 4px; padding:24px   ;'>
 
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-12">
                                                     <div class="form-check d-flex align-items-center justify-content-start">
@@ -1222,7 +1000,6 @@
                                             </div>
 
 
-                                            <!-- PART 2 -->
                                             <div class='form-row mt-2  '>
 
                                                 <div class="form-group col-md-4">
@@ -1268,7 +1045,6 @@
 
                                                     <div class='row'>
 
-                                                        <!-- PART 4 -->
                                                         <div class="form-group col-md-6">
                                                             <div class="row px-4 ">
                                                                 <div class="form-check col-md-6 d-flex align-items-center justify-content-between">
@@ -1299,7 +1075,6 @@
                                             </div>
 
 
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-6">
                                                     <label class="form-check-label" for="ae_bien_ampliar"></label>
@@ -1308,9 +1083,6 @@
                                             </div>
 
 
-                                            <!-- BOTTOM PART -->
-
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-12">
                                                     <div class="form-check d-flex align-items-center justify-content-start">
@@ -1321,7 +1093,6 @@
                                             </div>
 
 
-                                            <!-- PART 2 -->
                                             <div class='form-row mt-2  '>
 
                                                 <div class="form-group col-md-4">
@@ -1367,7 +1138,6 @@
 
                                                     <div class='row'>
 
-                                                        <!-- PART 4 -->
                                                         <div class="form-group col-md-6">
                                                             <div class="row px-4 ">
                                                                 <div class="form-check col-md-6 d-flex align-items-center justify-content-between">
@@ -1398,7 +1168,6 @@
                                             </div>
 
 
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-12">
                                                     <label class="form-check-label" for="as_bien_ampliar"></label>
@@ -1414,9 +1183,7 @@
                                 <page string='Fin'>
                                     <div class="container-fluid">
                                         <div class="container" style=' background-color: #fff; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26);  border-radius: 4px; padding:24px   ;'>
-                                            <!-- <div class="container" style='background-color: #F1F1F1; color: #000; box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.26); padd border-radius: 4px-->
 
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="form-group col-md-12">
                                                     <div class="form-check d-flex align-items-center justify-content-start">
@@ -1427,7 +1194,6 @@
                                             </div>
 
 
-                                            <!-- PART 1 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="col-md-12">
                                                     <div class="row mt-2">
@@ -1445,7 +1211,6 @@
                                                     </div>
                                                     <div class="row px-4 mt-2">
 
-                                                        <!-- left -->
                                                         <div class="col-6">
 
                                                             <div class="row  px-4">
@@ -1462,7 +1227,6 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row  px-4">
-                                                                <!-- PART 1 -->
                                                                 <div class="form-group col-md-12">
                                                                     <div class="form-check d-flex align-items-center justify-content-start">
                                                                         <field name="fin_efectivo" class="form-check-input" id="fin_efectivo" attrs="{'readonly': [('fin_cancel_deuda', '=', False)]}" />
@@ -1480,7 +1244,6 @@
                                                             </div>
                                                         </div>
 
-                                                        <!-- right -->
                                                         <div class="col-6">
                                                             <div class="row px-4 ">
                                                                 <div class="form-group col-md-12">
@@ -1513,7 +1276,6 @@
                                                                 <div class="form-group col-md-12">
                                                                     <div class="row px-4">
                                                                         <div class="form-check col-md-5 d-flex align-items-center justify-content-left">
-                                                                            <!-- <label class="form-check-label" for="fin_oficio_desistimiento"></label> -->
                                                                             <field name='fin_env_emp' class="form-check-input" />
                                                                             <label class="form-check-label" for="fin_env_emp_fecha"></label>
                                                                         </div>
@@ -1551,7 +1313,6 @@
                                             </div>
 
 
-                                            <!-- PART 2 -->
                                             <div class="form-row mt-2 ">
                                                 <div class="col-md-12">
 
@@ -1605,7 +1366,6 @@
                                 </page>
                                 <page string='Libro - Legal'>
                                     <div class="container-fluid text-black ">
-                                        <!-- <div class="container"> -->
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                 <div class="form-row">
@@ -1616,80 +1376,21 @@
                                                                 <field name="nota_id" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
                                                                     <form create="true" edit="true" editable="bottom">
                                                                         <field name='notes' attrs="{'readonly': [('state','=','no_editable')]}" />
-                                                                        <!-- <field name='creacion_fecha' /> -->
                                                                         <field name='state' string='ESTADO' />
                                                                     </form>
                                                                 </field>
                                                             </page>
-                                                            <!-- <page string="Historial  4 Notas">
-                                                                    <field name="nota_id" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
-                                                                        <tree create="true" edit="true" editable="bottom">
-                                                                            <field name='notes' />
-                                                                            <field name='demanda_id' />
-                                                                            <field name='some_field' />
-                                                                        </tree>
-                                                                    </field>
-                                                                </page> -->
+
                                                         </notebook>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- </div> -->
                                     </div>
                                 </page>
-                                <!-- <page string='Galeria'>
-                                    <div class="container-fluid text-black ">
-                         
-                                        <div class="row">
-                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12">
-                                                        <notebook>
-                                                            <page>
-                                                                <field name="id" invisible="1" />
-                                                                <field name="galeria_id" invisible="0" context="{'parent_id': active_id, 'parent_model': 'rf.demandas'}">
-                                                                    <kanban>
-
-                                                                      
-
-                                                                        <templates>
-                                                                            <t t-name='kanban-box'>
-                                                                                <div class='oe_kanban_global_click'>
-                                                                                    <div class='o_kanban_image'>
-                                                                                        <img t-att-src="kanban_image('rf.demandas','galeria_imagen',record.id.raw_value)" alt='Image' />
-                                                                        
-
-                                                                                    </div>
-                                                                                    <div class='oe_kanban_details'>
-                                                                                        <div class='o_kanban_record_top'>
-                                                                                            <div class='o_kanban_record_heading'>
-                                                                                                <strong class='o_kanban_record_title oe_partner_heading'>
-                                                                                                    <field name='desc' />
-                                                                                                </strong>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </t>
-                                                                        </templates>
-
-
-                                                                    </kanban>
-                                                                </field>
-                                                            </page>
-                                                        </notebook>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                    </div>
-                                </page> -->
                             </notebook>
                         </div>
                     </div>
-                    <!-- </div> -->
                 </div>
                 <div class="row">
                     <div class="oe_chatter">

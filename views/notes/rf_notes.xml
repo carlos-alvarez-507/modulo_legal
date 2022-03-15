@@ -6,28 +6,10 @@
         <field name="model">rf.notes</field>
         <field name="arch" type="xml">
             <form>
-                <group>
-                    <!-- <field name='demanda_id' /> -->
-                    <!-- <field name='cntacliente' /> -->
-                    <field name='notes' />
-                    <!-- <field name='creacion_fecha' /> -->
-                    <!-- <field name='age_of_creation' /> -->
-                    <!-- <field name='abogado_logger_name' /> -->
-                    <!-- <field name='abogado_logger_name' />-->
-                </group>
-                <!-- <group> -->
-                    <!-- <field name='cntaprestamo' /> -->
-                    <!-- <field name='codtab' /> -->
-                    <!-- <field name='state' /> -->
-                    <!-- <field name='tcli' /> -->
-                    <!-- <field name='tcli_desc' /> -->
-                    <!-- <field name='sist' /> -->
-                    <!-- <field name='cia' /> -->
-                    <!-- <field name='codtran' /> -->
-                    <!-- <field name='clave' /> -->
-                <!-- </group> -->
+                <group>                    
+                    <field name='notes' />                   
+                </group>                
             </form>
-
         </field>
     </record>
 
@@ -36,25 +18,12 @@
         <field name="name">rf.notes.tree.view</field>
         <field name="model">rf.notes</field>
         <field name="arch" type="xml">
-            <tree    >
-                <!-- <field name='demanda_id' /> -->
-                <!-- <field name='cntacliente' /> -->
+            <tree>            
                 <field name='creacion_fecha' string='Fecha de Creación'/>
                 <field name='abogado_logger_name' string='Usuario'/>
                 <field name='notes' string='Observación'  decoration-bf="'|', ('state', '=', 'editable'), ('state', '=', 'no_editable')"/>
-                <field name='state' string='Estado' decoration-info="state == 'editable'" decoration-bf="state == 'editable'" decoration-warning="state == 'no_editable'"/>
-                <!-- <field name='age_of_creation' /> -->
-                <!-- <field name='abogado_logger_name' /> -->
-                <!-- <field name='cntaprestamo' /> -->
-                <!-- <field name='codtab' /> -->
-                <!-- <field name='tcli' /> -->
-                <!-- <field name='tcli_desc' /> -->
-                <!-- <field name='sist' /> -->
-                <!-- <field name='cia' /> -->
-                <!-- <field name='codtran' /> -->
-                <!-- <field name='clave' /> -->
+                <field name='state' string='Estado' decoration-info="state == 'editable'" decoration-bf="state == 'editable'" decoration-warning="state == 'no_editable'"/>                
             </tree>
         </field>
     </record>
-
 </odoo>

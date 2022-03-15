@@ -4,13 +4,8 @@
 
     <template id="assets_backend_report2" name="hr_attendance informes" inherit_id="web.assets_backend">
         <xpath expr="." position="inside">
-
-
             <!-- <script type="text/javascript" src="/modulo_legal/static/src/js/testing.js"></script> -->
-
-
             <link rel="stylesheet" type="text/scss" href="/modulo_legal/static/src/scss/test.scss"/>
-
         </xpath>
     </template>
 
@@ -36,9 +31,7 @@
                 <!-- Filtro Rápido -->
                 <filter name='sec_fianza' string='Fianza' domain="[('sec_fianza','=',True)]" />
                 <filter name='bienes' string='Bienes' domain="[('bienes','=',True)]" />
-                <!-- <filter name='notificacion' string='Notificación' domain="[('notificacion','=',True)]" /> -->
                 <filter name='noti_solicitud' string='Solicitud Elevar Embargo y Devolución de Fianza' domain="[('noti_solicitud','=',True)]" />
-                <!-- <filter name='embargo_visibility' string='Embargo' domain="[('embargo_visibility','=',True)]" /> -->
                 <filter name='adj_finca' string='Adjudicación de Finca' domain="[('adj_finca','=',True)]" />
                 <filter name='amp_emb' string='Ampliación Embargo' domain="[('amp_emb','=',True)]" />
                 <filter name='amp_sec' string='Ampliación Secuestro' domain="[('amp_sec','=',True)]" />
@@ -48,9 +41,6 @@
 
 
                 <!-- Agrupación Rápida -->
-                <!-- expand=0 automaticamente es para que no se expanda simplemente se agrupe, lo opuesto a expand=1 -->
-                <!-- col=10 para que ocupe las 10 columnas de las 12 -->
-                <!-- context nos permite re4alizar agrupacion, nos permite enviar parametros a una funcion en el model-->
                 <group expand='1' string='Agrupar por' colspan='12' col='10'>
                     <filter name='sucursal' string='Compañías' context="{'group_by':'sucursal'}" />
                     <filter name='provincia' string='Provincias' context="{'group_by':'provincia'}" />
@@ -60,20 +50,14 @@
                 </group>
 
 
-                <!-- search panel -->
-                <!-- <xpath expr='//search' position='inside'> -->
+                <!-- search panel -->              
                 <searchpanel class='rf_root'>
-                    <!-- <searchpanel class='account_root'> -->
                     <field name='sucursal' string='Empresas' icon='fa-user' select="multi" enable_counters="1" class='text-wrap !important'/>
                     <field name='provincia' string='Provincias' icon='fa-us er' select="multi" enable_counters="1" class='text-wrap !important'/>
                     <field name='abogado' string='Abogados' icon='fa-user' select="multi" enable_counters="1" class='text-wrap !important'/>
                     <field name='juzgado' string='Juzgados' icon='fa-user' select="multi" enable_counters="1" class='text-wrap !important'/>
-                </searchpanel>
-                <!-- </xpath> -->
-
+                </searchpanel>               
             </search>
-
-
         </field>
     </record>
 </odoo>
